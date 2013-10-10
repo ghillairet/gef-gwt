@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Export-Package: org.eclipse.gef,org.eclipse.gef.commands,org.eclipse.g
+ ef.dnd,org.eclipse.gef.editparts,org.eclipse.gef.editpolicies,org.ecl
+ ipse.gef.gwt,org.eclipse.gef.handles,org.eclipse.gef.internal;x-frien
+ ds:="org.eclipse.gef.examples.text,org.eclipse.gef.examples.logic",or
+ g.eclipse.gef.internal.icons;x-internal:=true,org.eclipse.gef.interna
+ l.ui.palette;x-internal:=true,org.eclipse.gef.internal.ui.palette.edi
+ tparts;x-internal:=true,org.eclipse.gef.internal.ui.rulers;x-internal
+ :=true,org.eclipse.gef.palette,org.eclipse.gef.print,org.eclipse.gef.
+ requests,org.eclipse.gef.rulers,org.eclipse.gef.tools,org.eclipse.gef
+ .ui.actions,org.eclipse.gef.ui.console,org.eclipse.gef.ui.console.ico
+ ns,org.eclipse.gef.ui.palette,org.eclipse.gef.ui.palette.customize,or
+ g.eclipse.gef.ui.palette.editparts,org.eclipse.gef.ui.parts,org.eclip
+ se.gef.ui.properties,org.eclipse.gef.ui.rulers,org.eclipse.gef.ui.sta
+ ckview,org.eclipse.gef.ui.stackview.icons,org.eclipse.gef.ui.views.pa
+ lette,org.eclipse.gef.util
+Bundle-ActivationPolicy: lazy
+Bundle-Localization: plugin
+Bundle-Name: %Plugin.name
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.equinox.common;bundle-version="3.6.0";visibility:=reexport,
+ org.eclipse.core.runtime;bundle-version="3.7.0";visibility:=reexport,
+ org.eclipse.osgi2;bundle-version="3.7.0";visibility:=reexport,
+ com.ibm.icu;bundle-version="3.6.0";visibility:=reexport,
+ org.eclipse.ui.views;bundle-version="3.7.0";visibility:=reexport
+Bundle-Vendor: %Plugin.providerName
+Bundle-Version: 3.7.0.201210270855
+Bundle-Activator: org.eclipse.gef.internal.InternalGEFPlugin
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.eclipse.gef; singleton:=true
+
+

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component name="org.eclipse.jface_3.7.0.I20110522-1430" version="1.2">
+    <plugin id="org.eclipse.jface_3.7.0.I20110522-1430"/>
+    <package name="org.eclipse.jface.action" visibility="1">
+        <type name="AbstractGroupMarker" restrictions="2"/>
+        <type name="ActionContributionItem" restrictions="2"/>
+        <type name="GroupMarker" restrictions="2"/>
+        <type name="IAction" restrictions="1"/>
+        <type name="IContributionItem" restrictions="1"/>
+        <type name="IContributionManagerOverrides" restrictions="1"/>
+        <type name="IMenuManager" restrictions="1"/>
+        <type name="Separator" restrictions="2"/>
+        <type name="SubContributionItem" restrictions="2"/>
+        <type name="ToolBarContributionItem" restrictions="2"/>
+    </package>
+    <package name="org.eclipse.jface.dialogs" visibility="1">
+        <type name="DialogSettings" restrictions="2"/>
+        <type name="IDialogLabelKeys" restrictions="1"/>
+    </package>
+    <package name="org.eclipse.jface.fieldassist" visibility="1">
+        <type name="ControlDecoration" restrictions="2"/>
+    </package>
+    <package name="org.eclipse.jface.operation" visibility="1">
+        <type name="ModalContext" restrictions="6"/>
+    </package>
+    <package name="org.eclipse.jface.preference" visibility="1">
+        <type name="PreferenceConverter" restrictions="4"/>
+        <type name="PreferenceStore" restrictions="2"/>
+    </package>
+    <package name="org.eclipse.jface.resource" visibility="1">
+        <type name="ColorRegistry" restrictions="2"/>
+        <type name="FontRegistry" restrictions="2"/>
+        <type name="ImageRegistry" restrictions="2"/>
+        <type name="JFaceResources" restrictions="6"/>
+        <type name="StringConverter" restrictions="6"/>
+    </package>
+    <package name="org.eclipse.jface.viewers" visibility="1">
+        <type name="ArrayContentProvider" restrictions="2"/>
+        <type name="CellEditor" restrictions="0"/>
+        <type name="CellEditor$LayoutData" restrictions="2"/>
+        <type name="CheckboxCellEditor" restrictions="2"/>
+        <type name="CheckboxTableViewer" restrictions="2"/>
+        <type name="CheckboxTreeViewer" restrictions="2"/>
+        <type name="ColorCellEditor" restrictions="2"/>
+        <type name="ColumnLayoutData" restrictions="2"/>
+        <type name="ColumnPixelData" restrictions="2"/>
+        <type name="ColumnViewerEditorDeactivationEvent" restrictions="2"/>
+        <type name="ColumnWeightData" restrictions="2"/>
+        <type name="ComboBoxCellEditor" restrictions="2"/>
+        <type name="IDecoration" restrictions="1"/>
+        <type name="ListViewer" restrictions="2"/>
+        <type name="StructuredSelection" restrictions="2"/>
+        <type name="StructuredViewerInternals" restrictions="6">
+            <method name="getItems" restrictions="8" signature="(Lorg/eclipse/jface/viewers/StructuredViewer;Ljava/lang/Object;)[Lorg/eclipse/swt/widgets/Widget;"/>
+            <method name="setAssociateListener" restrictions="8" signature="(Lorg/eclipse/jface/viewers/StructuredViewer;Lorg/eclipse/jface/viewers/StructuredViewerInternals$AssociateListener;)V"/>
+        </type>
+        <type name="StructuredViewerInternals$AssociateListener" restrictions="3"/>
+        <type name="TableTreeViewer" restrictions="2"/>
+        <type name="TableViewer" restrictions="2"/>
+        <type name="TreeViewer" restrictions="2"/>
+    </package>
+    <package name="org.eclipse.jface.viewers.deferred" visibility="1">
+        <type name="IConcurrentModel" restrictions="1"/>
+    </package>
+</component>

@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.swt;singleton:=true
+Bundle-Version: 3.7.1.201210270855
+Bundle-ClassPath: org.eclipse.swt_3.7.1.201210270855.jar
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.swt,
+ org.eclipse.swt.accessibility,
+ org.eclipse.swt.custom,
+ org.eclipse.swt.dnd,
+ org.eclipse.swt.events,
+ org.eclipse.swt.graphics,
+ org.eclipse.swt.internal;x-friends:="org.eclipse.ui",
+ org.eclipse.swt.layout,
+ org.eclipse.swt.printing,
+ org.eclipse.swt.widgets
+DynamicImport-Package: org.eclipse.swt.accessibility2, org.mozilla.xpcom
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Eclipse-ExtensibleAPI: true

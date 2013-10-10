@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Export-Package: org.osgi.framework
+Bundle-Version: 4.3.0.201210270855
+Bundle-Name: Framework
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.osgi.framework
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+

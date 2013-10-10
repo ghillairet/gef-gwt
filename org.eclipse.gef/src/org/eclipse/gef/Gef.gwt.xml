@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.4.0//EN" "http://google-web-toolkit.googlecode.com/svn/tags/2.4.0/distro-source/core/src/gwt-module.dtd">
+<module>
+	<inherits name="com.google.gwt.user.User" />
+	<inherits name="com.ibm.icu.Icu" />
+	<inherits name="org.eclipse.swt.Swt" />
+	<inherits name="org.eclipse.Osgi" />
+	<inherits name="com.googlecode.gwtx.java.Beans"/>
+	<inherits name="org.eclipse.jface.JFace"/>
+	<inherits name="org.eclipse.core.EquinoxCommon"/>
+	<inherits name="org.eclipse.ui.Ui"/>
+	<inherits name="java.Emul"/>
+	<!-- 
+	<inherits name="com.allen_sauer.gwt.log.gwt-log-DEBUG" />
+	 -->
+	
+	<source path=""/>
+	
+ <!-- Fall through to this rule if the browser isn't Firefox -->
+  <replace-with class="org.eclipse.gef.BrowserCursorSupportDefaultImpl">
+    <when-type-is class="org.eclipse.gef.BrowserCursorSupport"/>
+  </replace-with>
+
+  <replace-with class="org.eclipse.gef.BrowserCursorSupportIEImpl">
+    <when-type-is class="org.eclipse.gef.BrowserCursorSupport" />
+    <any>
+      <when-property-is name="user.agent" value="ie6" />
+      <when-property-is name="user.agent" value="ie8" />
+      <when-property-is name="user.agent" value="ie9" />
+    </any>
+  </replace-with>
+</module>

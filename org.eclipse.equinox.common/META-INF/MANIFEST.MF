@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Export-Package: org.eclipse.core.internal.runtime;common=split;mandato
+ ry:=common; x-friends:="org.eclipse.core.contenttype,  org.eclipse.co
+ re.jobs,  org.eclipse.equinox.preferences,  org.eclipse.equinox.regis
+ try,  org.eclipse.core.runtime,  org.eclipse.core.runtime.compatibili
+ ty,  org.eclipse.core.filesystem,  org.eclipse.equinox.security",org.
+ eclipse.core.runtime;common=split;version="3.4.0";mandatory:=common
+Bundle-ActivationPolicy: lazy
+Bundle-Localization: plugin
+Bundle-Name: %pluginName
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.osgi.framework;bundle-version="4.3.0";visibility:=
+ reexport,org.eclipse.osgi2;bundle-version="3.7.0";visibility:=reexpor
+ t
+Eclipse-SourceReferences: scm:cvs:pserver:dev.eclipse.org:/cvsroot/rt:
+ org.eclipse.equinox/components/bundles/org.eclipse.equinox.common;tag
+ =v20110523
+Bundle-Vendor: %providerName
+Eclipse-LazyStart: true
+Bundle-Version: 3.6.0.201210270855
+Comment-Header: Both Eclipse-LazyStart and Bundle-ActivationPolicy are
+  specified for compatibility with 3.2
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.eclipse.core.internal.runtime.Activator
+Bundle-SymbolicName: org.eclipse.equinox.common; singleton:=true
+
+

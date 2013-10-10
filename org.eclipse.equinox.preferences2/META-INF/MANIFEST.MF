@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Export-Package: org.eclipse.core.internal,org.eclipse.core.runtime.pre
+ ferences,org.osgi.service.prefs
+Require-Bundle: org.eclipse.equinox.common;bundle-version="3.6.0";visi
+ bility:=reexport
+Bundle-Version: 3.7.0.201210270855
+Bundle-Name: Preferences2
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.eclipse.equinox.preferences2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+
