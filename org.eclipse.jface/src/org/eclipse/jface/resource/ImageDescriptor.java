@@ -285,6 +285,46 @@ public abstract class ImageDescriptor extends DeviceResourceDescriptor {
 	 * @since 2.0
 	 */
 	public Image createImage(boolean returnMissingImageOnError, Device device) {
+		ImageData data = getImageData();
+		if (data == null) {
+			if (!returnMissingImageOnError) {
+				return null;
+			}
+			data = DEFAULT_IMAGE_DATA;
+		}
+
+		/*
+		* Try to create the supplied image. If there is an SWT Exception try
+		* and create the default image if that was requested. Return null if
+		* this fails.
+		*/
+
+		try {
+			com.google.gwt.user.client.ui.Image gwtImage = null;
+			if (this instanceof ImageDataImageDescriptor) {
+				if (((ImageDataImageDescriptor)this).originalImage != null && ((ImageDataImageDescriptor)this).originalImage.getGwtImage() != null) {
+					gwtImage = ((ImageDataImageDescriptor)this).originalImage.getGwtImage();
+				}
+			}
+			if (data.transparentPixel >= 0) {
+				ImageData maskData = data.getTransparencyMask();
+				return new Image(device, data, maskData, gwtImage);
+			}
+			return new Image(device, data, gwtImage);
+		} catch (SWTException exception) {
+			if (returnMissingImageOnError) {
+				try {
+					return new Image(device, DEFAULT_IMAGE_DATA);
+				} catch (SWTException nextException) {
+					return null;
+				}
+			}
+			return null;
+		}
+			
+		}
+
+	public Image createImageOld(boolean returnMissingImageOnError, Device device) {
 
 		ImageData data = getImageData();
 		if (data == null) {

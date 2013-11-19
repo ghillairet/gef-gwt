@@ -494,6 +494,17 @@ public final class Image extends Resource implements Drawable {
 			gwtImage = new com.google.gwt.user.client.ui.Image((String) stream);
 		}
 	}
+	
+	public Image(Device device, ImageData source, ImageData mask, com.google.gwt.user.client.ui.Image gwtImage) {
+		this(device, source, mask);
+		this.gwtImage = gwtImage;
+	}
+
+	public Image(Device device, ImageData data, com.google.gwt.user.client.ui.Image gwtImage) {
+		this(device, data);
+		this.gwtImage = gwtImage;
+	}
+
 
 	void initNative(String filename) {
 	}

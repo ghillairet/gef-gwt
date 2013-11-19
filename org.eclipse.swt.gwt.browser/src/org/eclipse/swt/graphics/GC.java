@@ -839,6 +839,13 @@ public final class GC extends Resource {
 	 *                </ul>
 	 */
 	public void drawRectangle(Rectangle rect) {
+		if (rect == null) {
+			throw new IllegalArgumentException();
+		}
+		if (isDisposed()) {
+			throw new SWTException(SWT.ERROR_GRAPHIC_DISPOSED);
+		}
+		drawRectangle(rect.x, rect.y, rect.width, rect.height);
 	}
 
 	/**
