@@ -15,14 +15,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.KeyEvent;
-import org.eclipse.swt.graphics.Cursor;
-
 import org.eclipse.draw2d.Connection;
 import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.geometry.Point;
-
 import org.eclipse.gef.AccessibleAnchorProvider;
 import org.eclipse.gef.ConnectionEditPart;
 import org.eclipse.gef.DragTracker;
@@ -32,6 +27,9 @@ import org.eclipse.gef.RequestConstants;
 import org.eclipse.gef.SharedCursors;
 import org.eclipse.gef.Tool;
 import org.eclipse.gef.requests.ReconnectRequest;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.KeyEvent;
+import org.eclipse.swt.graphics.Cursor;
 
 /**
  * A DragTracker that moves the endpoint of a connection to another location.

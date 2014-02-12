@@ -20,7 +20,6 @@ import java.util.Map;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.geometry.PrecisionRectangle;
 import org.eclipse.draw2d.geometry.Rectangle;
-
 import org.eclipse.gef.handles.HandleBounds;
 import org.eclipse.gef.requests.GroupRequest;
 

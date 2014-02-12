@@ -15,6 +15,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import org.eclipse.draw2d.geometry.Point;
+import org.eclipse.gef.EditPart;
+import org.eclipse.gef.EditPartViewer;
+import org.eclipse.gef.TreeEditPart;
+import org.eclipse.gef.editparts.RootTreeEditPart;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.FocusEvent;
 import org.eclipse.swt.events.FocusListener;
@@ -32,15 +38,6 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeItem;
 import org.eclipse.swt.widgets.Widget;
-
-import org.eclipse.jface.viewers.StructuredSelection;
-
-import org.eclipse.draw2d.geometry.Point;
-
-import org.eclipse.gef.EditPart;
-import org.eclipse.gef.EditPartViewer;
-import org.eclipse.gef.TreeEditPart;
-import org.eclipse.gef.editparts.RootTreeEditPart;
 
 /**
  * An EditPartViewer implementation based on a

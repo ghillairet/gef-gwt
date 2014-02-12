@@ -11,15 +11,13 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.actions;
 
-import org.eclipse.swt.widgets.Display;
-
-import org.eclipse.ui.IEditorPart;
-import org.eclipse.ui.IWorkbenchPart;
-
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.Request;
 import org.eclipse.gef.RequestConstants;
 import org.eclipse.gef.internal.GEFMessages;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.IWorkbenchPart;
 
 /**
  * An action to perform direct editing on a selected part. The DirectEditAction

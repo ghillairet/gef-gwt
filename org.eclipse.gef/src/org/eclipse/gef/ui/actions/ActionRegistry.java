@@ -16,9 +16,8 @@ import java.util.Iterator;
 import java.util.Map;
 
 import org.eclipse.core.runtime.Assert;
-import org.eclipse.jface.action.IAction;
-
 import org.eclipse.gef.Disposable;
+import org.eclipse.jface.action.IAction;
 
 /**
  * A container for editor actions. You must register the actions before they

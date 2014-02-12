@@ -17,8 +17,6 @@ import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.LayoutManager;
 import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.ToolbarLayout;
-
-import org.eclipse.gef.internal.ui.palette.PaletteColorUtil;
 import org.eclipse.gef.palette.PaletteContainer;
 import org.eclipse.gef.ui.palette.PaletteViewerPreferences;
 import org.eclipse.gef.ui.palette.editparts.PaletteEditPart;
@@ -44,8 +42,8 @@ public class GroupEditPart extends PaletteEditPart {
 	 */
 	public IFigure createFigure() {
 		Figure figure = new Figure();
-		figure.setOpaque(true);
-		figure.setBackgroundColor(PaletteColorUtil.WIDGET_LIST_BACKGROUND);
+		figure.setOpaque(false);
+//		figure.setBackgroundColor(PaletteColorUtil.WIDGET_LIST_BACKGROUND);
 		return figure;
 	}
 

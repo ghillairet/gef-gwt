@@ -11,12 +11,11 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.actions;
 
+import org.eclipse.gef.internal.GEFMessages;
 import org.eclipse.ui.ISharedImages;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.actions.ActionFactory;
 import org.eclipse.ui.actions.RetargetAction;
-
-import org.eclipse.gef.internal.GEFMessages;
 
 /**
  * @author Eric Bordeau

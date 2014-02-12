@@ -21,9 +21,7 @@ import java.util.Map;
 import org.eclipse.core.runtime.Assert;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.Platform;
-
 import org.eclipse.draw2d.EventListenerList;
-
 import org.eclipse.gef.AccessibleEditPart;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPartFactory;

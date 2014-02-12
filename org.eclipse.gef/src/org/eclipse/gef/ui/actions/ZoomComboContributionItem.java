@@ -11,6 +11,10 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.actions;
 
+import org.eclipse.core.runtime.Assert;
+import org.eclipse.gef.editparts.ZoomListener;
+import org.eclipse.gef.editparts.ZoomManager;
+import org.eclipse.jface.action.ContributionItem;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.SWTException;
 import org.eclipse.swt.events.FocusEvent;
@@ -23,15 +27,9 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.ToolBar;
 import org.eclipse.swt.widgets.ToolItem;
-
-import org.eclipse.core.runtime.Assert;
-import org.eclipse.jface.action.ContributionItem;
 import org.eclipse.ui.IPartListener;
 import org.eclipse.ui.IPartService;
 import org.eclipse.ui.IWorkbenchPart;
-
-import org.eclipse.gef.editparts.ZoomListener;
-import org.eclipse.gef.editparts.ZoomManager;
 
 /**
  * A ControlContribution that uses a {@link org.eclipse.swt.widgets.Combo} as

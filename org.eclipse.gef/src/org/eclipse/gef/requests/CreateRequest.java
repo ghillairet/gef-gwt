@@ -13,7 +13,6 @@ package org.eclipse.gef.requests;
 
 import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.draw2d.geometry.Point;
-
 import org.eclipse.gef.RequestConstants;
 
 /**

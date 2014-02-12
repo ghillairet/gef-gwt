@@ -13,19 +13,17 @@ package org.eclipse.gef.tools;
 
 import java.util.List;
 
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.KeyEvent;
-import org.eclipse.swt.widgets.Event;
-
 import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.geometry.Point;
-
 import org.eclipse.gef.AccessibleAnchorProvider;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPartViewer;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.requests.CreateConnectionRequest;
 import org.eclipse.gef.requests.CreationFactory;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.KeyEvent;
+import org.eclipse.swt.widgets.Event;
 
 /**
  * The default creation tool for connections. With this tool, the user must

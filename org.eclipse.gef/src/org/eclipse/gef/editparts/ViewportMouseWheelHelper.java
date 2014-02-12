@@ -11,15 +11,13 @@
  *******************************************************************************/
 package org.eclipse.gef.editparts;
 
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Event;
-
 import org.eclipse.draw2d.RangeModel;
 import org.eclipse.draw2d.Viewport;
 import org.eclipse.draw2d.geometry.Rectangle;
-
 import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gef.MouseWheelHelper;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Event;
 
 /**
  * ViewportMouseWheelHelper is the default MouseWheelHelper that should be used

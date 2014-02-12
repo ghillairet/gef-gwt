@@ -11,10 +11,9 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.actions;
 
+import org.eclipse.gef.internal.GEFMessages;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.actions.ActionFactory;
-
-import org.eclipse.gef.internal.GEFMessages;
 
 /**
  * An action to save the editor's current state.

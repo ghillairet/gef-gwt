@@ -11,10 +11,10 @@
  *******************************************************************************/
 package org.eclipse.gef;
 
+import org.eclipse.swt.widgets.Text;
+
 import com.ibm.icu.text.DecimalFormat;
 import com.ibm.icu.text.NumberFormat;
-
-import org.eclipse.swt.widgets.Text;
 
 /**
  * This is an internal class used for debugging

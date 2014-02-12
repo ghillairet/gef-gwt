@@ -15,21 +15,18 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import org.eclipse.swt.graphics.Color;
-import org.eclipse.swt.graphics.Image;
-
+import org.eclipse.draw2d.ColorConstants;
+import org.eclipse.gef.internal.InternalImages;
+import org.eclipse.gef.palette.PaletteContainer;
+import org.eclipse.gef.palette.PaletteEntry;
+import org.eclipse.gef.palette.PaletteSeparator;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IColorProvider;
 import org.eclipse.jface.viewers.ILabelProvider;
 import org.eclipse.jface.viewers.ILabelProviderListener;
 import org.eclipse.jface.viewers.TreeViewer;
-
-import org.eclipse.draw2d.ColorConstants;
-
-import org.eclipse.gef.internal.InternalImages;
-import org.eclipse.gef.palette.PaletteContainer;
-import org.eclipse.gef.palette.PaletteEntry;
-import org.eclipse.gef.palette.PaletteSeparator;
+import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Image;
 
 /**
  * This class is the ILabelProvider for the

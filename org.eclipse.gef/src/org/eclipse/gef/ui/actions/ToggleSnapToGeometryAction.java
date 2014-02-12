@@ -11,11 +11,10 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.actions;
 
-import org.eclipse.jface.action.Action;
-
 import org.eclipse.gef.GraphicalViewer;
 import org.eclipse.gef.SnapToGeometry;
 import org.eclipse.gef.internal.GEFMessages;
+import org.eclipse.jface.action.Action;
 
 /**
  * An action that toggles the

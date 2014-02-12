@@ -13,15 +13,13 @@ package org.eclipse.gef.handles;
 
 import java.util.List;
 
-import org.eclipse.swt.graphics.Cursor;
-
 import org.eclipse.draw2d.PositionConstants;
-
 import org.eclipse.gef.DragTracker;
 import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gef.Handle;
 import org.eclipse.gef.SharedCursors;
 import org.eclipse.gef.tools.DragEditPartsTracker;
+import org.eclipse.swt.graphics.Cursor;
 
 /**
  * A set of utility methods to create Handles for NonResizable Figures.

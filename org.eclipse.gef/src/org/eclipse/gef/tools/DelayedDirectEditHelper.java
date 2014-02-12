@@ -11,6 +11,9 @@
  *******************************************************************************/
 package org.eclipse.gef.tools;
 
+import org.eclipse.gef.EditPart;
+import org.eclipse.gef.EditPartViewer;
+import org.eclipse.gef.Request;
 import org.eclipse.swt.events.FocusAdapter;
 import org.eclipse.swt.events.FocusEvent;
 import org.eclipse.swt.events.FocusListener;
@@ -21,10 +24,6 @@ import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.events.MouseListener;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
-
-import org.eclipse.gef.EditPart;
-import org.eclipse.gef.EditPartViewer;
-import org.eclipse.gef.Request;
 
 /**
  * @author hudsonr Created on Mar 6, 2003

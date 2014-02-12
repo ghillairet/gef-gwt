@@ -14,12 +14,11 @@ package org.eclipse.gef.ui.parts;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Composite;
-
 import org.eclipse.gef.DefaultEditDomain;
 import org.eclipse.gef.palette.PaletteRoot;
 import org.eclipse.gef.ui.palette.PaletteViewer;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Composite;
 
 /**
  * This class serves as a quick starting point for clients who are new to GEF.

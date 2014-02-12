@@ -15,16 +15,14 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.eclipse.swt.widgets.Control;
-import org.eclipse.swt.widgets.Menu;
-
+import org.eclipse.gef.internal.Internal;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.ActionContributionItem;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.action.IMenuCreator;
 import org.eclipse.jface.resource.ImageDescriptor;
-
-import org.eclipse.gef.internal.Internal;
+import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.Menu;
 
 /**
  * This action allows to switch between the various supported layout modes for

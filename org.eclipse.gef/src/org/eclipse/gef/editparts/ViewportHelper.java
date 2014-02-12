@@ -13,7 +13,6 @@ package org.eclipse.gef.editparts;
 
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.Viewport;
-
 import org.eclipse.gef.GraphicalEditPart;
 
 /**

@@ -57,7 +57,7 @@
 			<version>3.7.0-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 
@@ -67,8 +67,10 @@
 				<includes>
 					<include>**/*.java</include>
 					<include>**/*.gwt.xml</include>
+					<include>**/*.gif</include>
+					<include>**/*.bmp</include>
 				</includes>
-			</resource>
+            </resource>
 		</resources>
 	</build>
 </project>

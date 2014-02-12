@@ -18,7 +18,6 @@ import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.draw2d.geometry.Insets;
 import org.eclipse.draw2d.geometry.Rectangle;
-
 import org.eclipse.gef.internal.ui.palette.PaletteColorUtil;
 import org.eclipse.gef.palette.PaletteSeparator;
 import org.eclipse.gef.ui.palette.editparts.PaletteEditPart;

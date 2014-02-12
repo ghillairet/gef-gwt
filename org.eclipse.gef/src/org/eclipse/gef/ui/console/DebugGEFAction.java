@@ -11,10 +11,9 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.console;
 
+import org.eclipse.gef.GEF;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.resource.ImageDescriptor;
-
-import org.eclipse.gef.GEF;
 
 /**
  * Actions associated with viewing debugging data in GEF

@@ -11,9 +11,8 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.actions;
 
-import org.eclipse.swt.dnd.Transfer;
-
 import org.eclipse.gef.dnd.SimpleObjectTransfer;
+import org.eclipse.swt.dnd.Transfer;
 
 /**
  * A GEF clipboard for cut/copy/paste actions between GEF editors. It exists

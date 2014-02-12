@@ -11,15 +11,13 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.stackview;
 
-import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Control;
-
+import org.eclipse.gef.commands.CommandStack;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IStatusLineManager;
 import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.viewers.TreeViewer;
-
-import org.eclipse.gef.commands.CommandStack;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
 
 /**
  * Internal class used for a debug view.

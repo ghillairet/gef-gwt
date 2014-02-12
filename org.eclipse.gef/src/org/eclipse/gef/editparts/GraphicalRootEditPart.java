@@ -19,7 +19,6 @@ import org.eclipse.draw2d.ScrollPane;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.draw2d.Viewport;
 import org.eclipse.draw2d.geometry.Dimension;
-
 import org.eclipse.gef.DragTracker;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPartViewer;

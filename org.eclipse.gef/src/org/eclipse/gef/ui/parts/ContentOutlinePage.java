@@ -11,15 +11,13 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.parts;
 
-import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Control;
-
+import org.eclipse.gef.EditPartViewer;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ISelectionProvider;
 import org.eclipse.jface.viewers.StructuredSelection;
-
-import org.eclipse.gef.EditPartViewer;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
 
 /**
  * A adapter for an outline page containing a single EditPartViewer. This class

@@ -11,11 +11,10 @@
  *******************************************************************************/
 package org.eclipse.gef.palette;
 
-import org.eclipse.jface.resource.ImageDescriptor;
-
 import org.eclipse.gef.SharedImages;
 import org.eclipse.gef.internal.GEFMessages;
 import org.eclipse.gef.tools.MarqueeSelectionTool;
+import org.eclipse.jface.resource.ImageDescriptor;
 
 /**
  * A palette ToolEntry for a {@link org.eclipse.gef.tools.MarqueeSelectionTool}.

@@ -11,13 +11,12 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.palette.customize;
 
-import org.eclipse.swt.widgets.Shell;
-
 import org.eclipse.gef.palette.PaletteContainer;
 import org.eclipse.gef.palette.PaletteEntry;
 import org.eclipse.gef.palette.PaletteStack;
 import org.eclipse.gef.palette.ToolEntry;
 import org.eclipse.gef.ui.palette.PaletteMessages;
+import org.eclipse.swt.widgets.Shell;
 
 /**
  * Factory to create {@link org.eclipse.gef.palette.PaletteStack}

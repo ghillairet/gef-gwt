@@ -11,10 +11,9 @@
  *******************************************************************************/
 package org.eclipse.gef.palette;
 
-import org.eclipse.jface.resource.ImageDescriptor;
-
 import org.eclipse.gef.requests.CreationFactory;
 import org.eclipse.gef.tools.CreationTool;
+import org.eclipse.jface.resource.ImageDescriptor;
 
 /**
  * A palette ToolEntry for a {@link CreationTool}.

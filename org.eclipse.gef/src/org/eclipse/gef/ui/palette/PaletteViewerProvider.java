@@ -11,11 +11,9 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.palette;
 
-import org.eclipse.swt.widgets.Composite;
-
 import org.eclipse.core.runtime.Assert;
-
 import org.eclipse.gef.EditDomain;
+import org.eclipse.swt.widgets.Composite;
 
 /**
  * PaletteViewerProvider provides a standard way of creating palette viewers

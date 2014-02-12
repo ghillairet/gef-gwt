@@ -21,7 +21,6 @@ import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.PolylineConnection;
 import org.eclipse.draw2d.XYAnchor;
 import org.eclipse.draw2d.geometry.Point;
-
 import org.eclipse.gef.AccessibleAnchorProvider;
 import org.eclipse.gef.ConnectionEditPart;
 import org.eclipse.gef.DragTracker;

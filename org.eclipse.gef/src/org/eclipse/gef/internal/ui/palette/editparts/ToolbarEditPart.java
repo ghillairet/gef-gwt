@@ -16,7 +16,6 @@ import org.eclipse.draw2d.Figure;
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
-
 import org.eclipse.gef.internal.ui.palette.PaletteColorUtil;
 import org.eclipse.gef.palette.PaletteToolbar;
 import org.eclipse.gef.ui.palette.PaletteViewerPreferences;

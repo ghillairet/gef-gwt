@@ -11,19 +11,16 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.views.palette;
 
-import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Control;
-
 import org.eclipse.core.runtime.Assert;
 import org.eclipse.core.runtime.IAdaptable;
-import org.eclipse.ui.part.Page;
-
 import org.eclipse.draw2d.IFigure;
-
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gef.ui.palette.PaletteViewer;
 import org.eclipse.gef.ui.palette.PaletteViewerProvider;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
+import org.eclipse.ui.part.Page;
 
 /**
  * The default page for the PaletteView that works in conjunction with a

@@ -13,10 +13,7 @@ package org.eclipse.gef.internal.ui.rulers;
 
 import java.util.List;
 
-import org.eclipse.swt.accessibility.AccessibleEvent;
-
 import org.eclipse.draw2d.IFigure;
-
 import org.eclipse.gef.AccessibleEditPart;
 import org.eclipse.gef.DragTracker;
 import org.eclipse.gef.EditPart;
@@ -32,6 +29,7 @@ import org.eclipse.gef.internal.GEFMessages;
 import org.eclipse.gef.requests.SelectionRequest;
 import org.eclipse.gef.rulers.RulerChangeListener;
 import org.eclipse.gef.rulers.RulerProvider;
+import org.eclipse.swt.accessibility.AccessibleEvent;
 
 /**
  * @author Pratik Shah

@@ -15,13 +15,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.eclipse.ui.IEditorPart;
-import org.eclipse.ui.IWorkbenchPart;
-
 import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.geometry.PrecisionRectangle;
 import org.eclipse.draw2d.geometry.Rectangle;
-
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gef.Request;
@@ -32,6 +28,8 @@ import org.eclipse.gef.internal.GEFMessages;
 import org.eclipse.gef.internal.InternalImages;
 import org.eclipse.gef.requests.AlignmentRequest;
 import org.eclipse.gef.tools.ToolUtilities;
+import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.IWorkbenchPart;
 
 /**
  * An action to align the selected parts.

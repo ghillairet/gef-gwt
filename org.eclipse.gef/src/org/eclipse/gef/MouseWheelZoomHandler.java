@@ -11,9 +11,8 @@
  *******************************************************************************/
 package org.eclipse.gef;
 
-import org.eclipse.swt.widgets.Event;
-
 import org.eclipse.gef.editparts.ZoomManager;
+import org.eclipse.swt.widgets.Event;
 
 /**
  * A MouseWheelHandler that zooms the given viewer. Typically, this handler

@@ -13,11 +13,10 @@ package org.eclipse.gef.ui.stackview;
 
 import java.util.EventObject;
 
-import org.eclipse.jface.viewers.Viewer;
-
 import org.eclipse.gef.commands.CommandStack;
 import org.eclipse.gef.commands.CommandStackListener;
 import org.eclipse.gef.commands.CompoundCommand;
+import org.eclipse.jface.viewers.Viewer;
 
 /**
  * Internal class used for a stack inspector.

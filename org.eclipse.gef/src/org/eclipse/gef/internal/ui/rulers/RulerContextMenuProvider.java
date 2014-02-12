@@ -11,12 +11,11 @@
  *******************************************************************************/
 package org.eclipse.gef.internal.ui.rulers;
 
-import org.eclipse.jface.action.IMenuManager;
-
 import org.eclipse.gef.ContextMenuProvider;
 import org.eclipse.gef.EditPartViewer;
 import org.eclipse.gef.ui.actions.CreateGuideAction;
 import org.eclipse.gef.ui.actions.GEFActionConstants;
+import org.eclipse.jface.action.IMenuManager;
 
 /**
  * @author Pratik Shah

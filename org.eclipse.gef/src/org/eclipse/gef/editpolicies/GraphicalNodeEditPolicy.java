@@ -17,7 +17,6 @@ import org.eclipse.draw2d.ConnectionLayer;
 import org.eclipse.draw2d.ConnectionRouter;
 import org.eclipse.draw2d.PolylineConnection;
 import org.eclipse.draw2d.geometry.Point;
-
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.LayerConstants;
 import org.eclipse.gef.NodeEditPart;

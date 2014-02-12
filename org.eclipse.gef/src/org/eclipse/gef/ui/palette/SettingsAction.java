@@ -11,10 +11,9 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.palette;
 
+import org.eclipse.gef.ui.palette.customize.PaletteSettingsDialog;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.dialogs.Dialog;
-
-import org.eclipse.gef.ui.palette.customize.PaletteSettingsDialog;
 
 /**
  * An action to launch the Settings dialog for the given palette.

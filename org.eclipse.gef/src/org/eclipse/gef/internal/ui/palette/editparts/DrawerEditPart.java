@@ -11,21 +11,11 @@
  *******************************************************************************/
 package org.eclipse.gef.internal.ui.palette.editparts;
 
-import org.eclipse.swt.accessibility.ACC;
-import org.eclipse.swt.accessibility.AccessibleControlEvent;
-import org.eclipse.swt.accessibility.AccessibleEvent;
-import org.eclipse.swt.graphics.Color;
-import org.eclipse.swt.graphics.Image;
-
-import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.ui.IMemento;
-
 import org.eclipse.draw2d.FocusEvent;
 import org.eclipse.draw2d.FocusListener;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.RangeModel;
 import org.eclipse.draw2d.geometry.Insets;
-
 import org.eclipse.gef.AccessibleEditPart;
 import org.eclipse.gef.ExposeHelper;
 import org.eclipse.gef.MouseWheelHelper;
@@ -39,6 +29,13 @@ import org.eclipse.gef.ui.palette.PaletteViewerPreferences;
 import org.eclipse.gef.ui.palette.editparts.IPinnableEditPart;
 import org.eclipse.gef.ui.palette.editparts.PaletteAnimator;
 import org.eclipse.gef.ui.palette.editparts.PaletteEditPart;
+import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.swt.accessibility.ACC;
+import org.eclipse.swt.accessibility.AccessibleControlEvent;
+import org.eclipse.swt.accessibility.AccessibleEvent;
+import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Image;
+import org.eclipse.ui.IMemento;
 
 /**
  * EditPart for a PaletteDrawer

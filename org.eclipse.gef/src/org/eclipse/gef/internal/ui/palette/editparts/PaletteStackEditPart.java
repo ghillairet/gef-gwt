@@ -14,14 +14,6 @@ package org.eclipse.gef.internal.ui.palette.editparts;
 import java.beans.PropertyChangeEvent;
 import java.util.Iterator;
 
-import org.eclipse.swt.events.MenuEvent;
-import org.eclipse.swt.events.MenuListener;
-import org.eclipse.swt.graphics.Point;
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Menu;
-
-import org.eclipse.jface.action.MenuManager;
-
 import org.eclipse.draw2d.ActionEvent;
 import org.eclipse.draw2d.ActionListener;
 import org.eclipse.draw2d.Border;
@@ -38,7 +30,6 @@ import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.draw2d.geometry.Rectangle;
-
 import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gef.Request;
 import org.eclipse.gef.RequestConstants;
@@ -49,6 +40,12 @@ import org.eclipse.gef.palette.ToolEntry;
 import org.eclipse.gef.ui.actions.SetActivePaletteToolAction;
 import org.eclipse.gef.ui.palette.PaletteViewer;
 import org.eclipse.gef.ui.palette.editparts.PaletteEditPart;
+import org.eclipse.jface.action.MenuManager;
+import org.eclipse.swt.events.MenuEvent;
+import org.eclipse.swt.events.MenuListener;
+import org.eclipse.swt.graphics.Point;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Menu;
 
 /**
  * The EditPart for a PaletteStack to be used on the toolbar.

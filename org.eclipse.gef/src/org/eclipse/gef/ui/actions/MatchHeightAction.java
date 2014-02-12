@@ -11,12 +11,10 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.actions;
 
-import org.eclipse.ui.IWorkbenchPart;
-
 import org.eclipse.draw2d.geometry.PrecisionRectangle;
-
 import org.eclipse.gef.internal.GEFMessages;
 import org.eclipse.gef.internal.InternalImages;
+import org.eclipse.ui.IWorkbenchPart;
 
 /**
  * An action that matches the height of all selected EditPart's Figures to the

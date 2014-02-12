@@ -22,7 +22,6 @@ import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.LayeredPane;
 import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.draw2d.geometry.Point;
-
 import org.eclipse.gef.AutoexposeHelper;
 import org.eclipse.gef.DragTracker;
 import org.eclipse.gef.EditPart;

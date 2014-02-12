@@ -11,17 +11,15 @@
  *******************************************************************************/
 package org.eclipse.gef.handles;
 
-import org.eclipse.swt.graphics.Color;
-import org.eclipse.swt.graphics.Cursor;
-
 import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.Locator;
 import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.draw2d.geometry.Rectangle;
-
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.GraphicalEditPart;
+import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Cursor;
 
 /**
  * A small square handle approximately 7x7 pixels in size, that is either black

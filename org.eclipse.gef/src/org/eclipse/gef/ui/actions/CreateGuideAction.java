@@ -13,14 +13,13 @@ package org.eclipse.gef.ui.actions;
 
 import java.util.Arrays;
 
-import org.eclipse.jface.action.Action;
-
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPartViewer;
 import org.eclipse.gef.internal.GEFMessages;
 import org.eclipse.gef.internal.ui.rulers.GuideEditPart;
 import org.eclipse.gef.internal.ui.rulers.RulerEditPart;
 import org.eclipse.gef.rulers.RulerProvider;
+import org.eclipse.jface.action.Action;
 
 /**
  * An Action that creates a guide on a ruler and reveals it.

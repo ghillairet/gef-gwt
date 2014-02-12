@@ -12,7 +12,6 @@
 package org.eclipse.gef.handles;
 
 import org.eclipse.draw2d.ConnectionLocator;
-
 import org.eclipse.gef.ConnectionEditPart;
 
 /**

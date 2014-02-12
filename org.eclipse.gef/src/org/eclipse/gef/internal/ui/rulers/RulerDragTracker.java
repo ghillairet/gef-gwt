@@ -13,17 +13,15 @@ package org.eclipse.gef.internal.ui.rulers;
 
 import java.util.Iterator;
 
-import org.eclipse.swt.graphics.Cursor;
-
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.geometry.Point;
 import org.eclipse.draw2d.geometry.Rectangle;
-
 import org.eclipse.gef.SharedCursors;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.commands.UnexecutableCommand;
 import org.eclipse.gef.editparts.ZoomManager;
 import org.eclipse.gef.tools.SimpleDragTracker;
+import org.eclipse.swt.graphics.Cursor;
 
 /**
  * @author Pratik Shah

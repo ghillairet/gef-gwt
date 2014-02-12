@@ -12,7 +12,6 @@
 package org.eclipse.gef;
 
 import org.eclipse.core.runtime.Assert;
-
 import org.eclipse.draw2d.geometry.PrecisionRectangle;
 
 /**

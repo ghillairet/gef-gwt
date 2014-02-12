@@ -13,11 +13,8 @@ package org.eclipse.gef.ui.actions;
 
 import java.util.List;
 
-import org.eclipse.ui.IWorkbenchPart;
-
 import org.eclipse.draw2d.geometry.PrecisionDimension;
 import org.eclipse.draw2d.geometry.PrecisionRectangle;
-
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gef.RequestConstants;
@@ -26,6 +23,7 @@ import org.eclipse.gef.commands.CompoundCommand;
 import org.eclipse.gef.internal.GEFMessages;
 import org.eclipse.gef.internal.InternalImages;
 import org.eclipse.gef.requests.ChangeBoundsRequest;
+import org.eclipse.ui.IWorkbenchPart;
 
 /**
  * An action that matches the size of all selected EditPart's Figures to the

@@ -14,6 +14,7 @@ package org.eclipse.gef.ui.parts;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
+import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.GC;
 import org.eclipse.swt.graphics.Point;
@@ -24,8 +25,6 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Layout;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Sash;
-
-import org.eclipse.draw2d.ColorConstants;
 
 class Splitter extends Composite {
 

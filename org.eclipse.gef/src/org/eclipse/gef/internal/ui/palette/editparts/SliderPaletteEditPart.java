@@ -11,11 +11,9 @@
  *******************************************************************************/
 package org.eclipse.gef.internal.ui.palette.editparts;
 
-import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.Figure;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.ToolbarLayout;
-
 import org.eclipse.gef.palette.PaletteRoot;
 import org.eclipse.gef.ui.palette.PaletteViewer;
 import org.eclipse.gef.ui.palette.editparts.PaletteAnimator;
@@ -32,9 +30,9 @@ public class SliderPaletteEditPart extends PaletteEditPart {
 
 	public IFigure createFigure() {
 		Figure figure = new Figure();
-		figure.setOpaque(true);
-		figure.setForegroundColor(ColorConstants.listForeground);
-		figure.setBackgroundColor(ColorConstants.button);
+		figure.setOpaque(false);
+//		figure.setForegroundColor(ColorConstants.listForeground);
+//		figure.setBackgroundColor(ColorConstants.black);
 		return figure;
 	}
 
@@ -49,12 +47,12 @@ public class SliderPaletteEditPart extends PaletteEditPart {
 	/**
 	 * @see org.eclipse.gef.editparts.AbstractGraphicalEditPart#registerVisuals()
 	 */
+	@SuppressWarnings("unchecked")
 	protected void registerVisuals() {
 		super.registerVisuals();
 		controller = new PaletteAnimator(
 				((PaletteViewer) getViewer()).getPaletteViewerPreferences());
-		getViewer().getEditPartRegistry()
-				.put(PaletteAnimator.class, controller);
+		getViewer().getEditPartRegistry().put(PaletteAnimator.class, controller);
 		ToolbarLayout layout = new PaletteToolbarLayout();
 		getFigure().setLayoutManager(layout);
 		getFigure().addLayoutListener(controller);

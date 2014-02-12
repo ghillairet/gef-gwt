@@ -16,7 +16,6 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.draw2d.IFigure;
-
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gef.Request;

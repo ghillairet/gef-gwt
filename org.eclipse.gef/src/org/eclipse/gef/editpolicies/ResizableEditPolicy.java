@@ -16,7 +16,6 @@ import java.util.List;
 
 import org.eclipse.draw2d.Cursors;
 import org.eclipse.draw2d.PositionConstants;
-
 import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;

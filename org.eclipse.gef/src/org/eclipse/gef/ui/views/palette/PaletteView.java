@@ -11,8 +11,8 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.views.palette;
 
+import org.eclipse.gef.internal.GEFMessages;
 import org.eclipse.swt.widgets.Composite;
-
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IPerspectiveDescriptor;
 import org.eclipse.ui.IPerspectiveListener;
@@ -23,8 +23,6 @@ import org.eclipse.ui.part.IPageBookViewPage;
 import org.eclipse.ui.part.MessagePage;
 import org.eclipse.ui.part.PageBook;
 import org.eclipse.ui.part.PageBookView;
-
-import org.eclipse.gef.internal.GEFMessages;
 
 /**
  * The GEF palette view

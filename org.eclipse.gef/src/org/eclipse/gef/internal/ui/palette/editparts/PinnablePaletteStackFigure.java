@@ -33,7 +33,6 @@ import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.draw2d.geometry.Point;
 import org.eclipse.draw2d.geometry.PointList;
 import org.eclipse.draw2d.geometry.Rectangle;
-
 import org.eclipse.gef.internal.ui.palette.PaletteColorUtil;
 import org.eclipse.gef.internal.ui.palette.editparts.ToolEntryEditPart.ToolEntryToggle;
 import org.eclipse.gef.ui.palette.PaletteViewerPreferences;

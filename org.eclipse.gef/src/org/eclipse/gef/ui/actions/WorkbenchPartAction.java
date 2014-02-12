@@ -11,12 +11,11 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.actions;
 
-import org.eclipse.jface.action.Action;
-import org.eclipse.ui.IWorkbenchPart;
-
 import org.eclipse.gef.Disposable;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.commands.CommandStack;
+import org.eclipse.jface.action.Action;
+import org.eclipse.ui.IWorkbenchPart;
 
 /**
  * Base class for actions involving a WorkbenchPart. The workbench part is

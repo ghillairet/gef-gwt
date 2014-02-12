@@ -11,9 +11,8 @@
  *******************************************************************************/
 package org.eclipse.gef.palette;
 
-import org.eclipse.jface.resource.ImageDescriptor;
-
 import org.eclipse.gef.requests.CreationFactory;
+import org.eclipse.jface.resource.ImageDescriptor;
 
 /**
  * A combination of a {@link PaletteTemplateEntry} and {@link ToolEntry}. The

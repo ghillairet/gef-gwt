@@ -13,9 +13,6 @@ package org.eclipse.gef.tools;
 
 import java.util.List;
 
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.graphics.Cursor;
-
 import org.eclipse.gef.DragTracker;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPartViewer;
@@ -23,6 +20,8 @@ import org.eclipse.gef.Request;
 import org.eclipse.gef.RequestConstants;
 import org.eclipse.gef.requests.DirectEditRequest;
 import org.eclipse.gef.requests.SelectionRequest;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Cursor;
 
 /**
  * DragTracker used to select, edit, and open {@link org.eclipse.gef.EditPart

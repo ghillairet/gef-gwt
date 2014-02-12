@@ -14,11 +14,6 @@ package org.eclipse.gef.internal.ui.palette.editparts;
 import java.util.Iterator;
 import java.util.List;
 
-import org.eclipse.swt.graphics.Color;
-import org.eclipse.swt.graphics.Image;
-import org.eclipse.swt.widgets.Control;
-import org.eclipse.swt.widgets.Display;
-
 import org.eclipse.draw2d.Animation;
 import org.eclipse.draw2d.Border;
 import org.eclipse.draw2d.BorderLayout;
@@ -45,10 +40,13 @@ import org.eclipse.draw2d.ToolbarLayout;
 import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.draw2d.geometry.Insets;
 import org.eclipse.draw2d.geometry.Rectangle;
-
 import org.eclipse.gef.internal.ui.palette.PaletteColorUtil;
 import org.eclipse.gef.ui.palette.PaletteViewerPreferences;
 import org.eclipse.gef.ui.palette.editparts.PaletteToolbarLayout;
+import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.Display;
 
 /**
  * @author Pratik Shah

@@ -17,7 +17,6 @@ import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.draw2d.geometry.Insets;
 import org.eclipse.draw2d.geometry.Point;
 import org.eclipse.draw2d.geometry.Rectangle;
-
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.ExposeHelper;
 import org.eclipse.gef.GraphicalEditPart;

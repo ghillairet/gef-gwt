@@ -13,13 +13,12 @@ package org.eclipse.gef.ui.properties;
 
 import java.util.EventObject;
 
-import org.eclipse.ui.views.properties.IPropertySource;
-import org.eclipse.ui.views.properties.PropertySheetEntry;
-
 import org.eclipse.gef.commands.CommandStack;
 import org.eclipse.gef.commands.CommandStackListener;
 import org.eclipse.gef.commands.CompoundCommand;
 import org.eclipse.gef.commands.ForwardUndoCompoundCommand;
+import org.eclipse.ui.views.properties.IPropertySource;
+import org.eclipse.ui.views.properties.PropertySheetEntry;
 
 /**
  * <p>

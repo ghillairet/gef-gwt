@@ -11,16 +11,8 @@
  *******************************************************************************/
 package org.eclipse.gef.internal.ui.palette.editparts;
 
-import org.eclipse.swt.accessibility.ACC;
-import org.eclipse.swt.accessibility.AccessibleControlEvent;
-import org.eclipse.swt.accessibility.AccessibleEvent;
-import org.eclipse.swt.graphics.Image;
-
-import org.eclipse.ui.IMemento;
-
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.IFigure;
-
 import org.eclipse.gef.AccessibleEditPart;
 import org.eclipse.gef.DragTracker;
 import org.eclipse.gef.Request;
@@ -29,6 +21,11 @@ import org.eclipse.gef.palette.PaletteEntry;
 import org.eclipse.gef.palette.PaletteTemplateEntry;
 import org.eclipse.gef.ui.palette.PaletteViewerPreferences;
 import org.eclipse.gef.ui.palette.editparts.PaletteEditPart;
+import org.eclipse.swt.accessibility.ACC;
+import org.eclipse.swt.accessibility.AccessibleControlEvent;
+import org.eclipse.swt.accessibility.AccessibleEvent;
+import org.eclipse.swt.graphics.Image;
+import org.eclipse.ui.IMemento;
 
 /**
  * @author Eric Bordeau, Pratik Shah

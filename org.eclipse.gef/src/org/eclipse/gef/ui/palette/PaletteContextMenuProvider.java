@@ -11,12 +11,11 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.palette;
 
-import org.eclipse.jface.action.IMenuManager;
-
 import org.eclipse.gef.ContextMenuProvider;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.ui.actions.GEFActionConstants;
 import org.eclipse.gef.ui.palette.editparts.IPinnableEditPart;
+import org.eclipse.jface.action.IMenuManager;
 
 /**
  * Provides the context menu for a palette.

@@ -12,8 +12,6 @@
 
 package org.eclipse.gef.internal.ui.palette.editparts;
 
-import org.eclipse.swt.graphics.Color;
-
 import org.eclipse.draw2d.Border;
 import org.eclipse.draw2d.ButtonModel;
 import org.eclipse.draw2d.ChangeEvent;
@@ -24,10 +22,10 @@ import org.eclipse.draw2d.ImageFigure;
 import org.eclipse.draw2d.Label;
 import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.Toggle;
-
 import org.eclipse.gef.internal.InternalImages;
 import org.eclipse.gef.internal.ui.palette.PaletteColorUtil;
 import org.eclipse.gef.ui.palette.PaletteMessages;
+import org.eclipse.swt.graphics.Color;
 
 /**
  * This is the figure for the pinned and unpinned toggle.

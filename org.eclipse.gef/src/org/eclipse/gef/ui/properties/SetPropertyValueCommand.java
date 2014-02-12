@@ -11,13 +11,12 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.properties;
 
-import com.ibm.icu.text.MessageFormat;
-
+import org.eclipse.gef.commands.Command;
+import org.eclipse.gef.internal.GEFMessages;
 import org.eclipse.ui.views.properties.IPropertySource;
 import org.eclipse.ui.views.properties.IPropertySource2;
 
-import org.eclipse.gef.commands.Command;
-import org.eclipse.gef.internal.GEFMessages;
+import com.ibm.icu.text.MessageFormat;
 
 /**
  * A command used to set or reset the value of a property.

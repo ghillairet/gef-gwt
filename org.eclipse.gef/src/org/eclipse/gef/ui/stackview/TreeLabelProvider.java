@@ -11,14 +11,12 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.stackview;
 
-import org.eclipse.swt.graphics.Image;
-
+import org.eclipse.gef.commands.Command;
+import org.eclipse.gef.commands.CommandStack;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.ILabelProvider;
 import org.eclipse.jface.viewers.ILabelProviderListener;
-
-import org.eclipse.gef.commands.Command;
-import org.eclipse.gef.commands.CommandStack;
+import org.eclipse.swt.graphics.Image;
 
 /**
  * Internal class used for a debug view.

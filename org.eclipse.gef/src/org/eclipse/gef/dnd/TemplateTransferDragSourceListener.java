@@ -13,13 +13,12 @@ package org.eclipse.gef.dnd;
 
 import java.util.List;
 
-import org.eclipse.swt.dnd.DragSourceEvent;
-import org.eclipse.swt.dnd.Transfer;
-
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPartViewer;
 import org.eclipse.gef.palette.CombinedTemplateCreationEntry;
 import org.eclipse.gef.palette.PaletteTemplateEntry;
+import org.eclipse.swt.dnd.DragSourceEvent;
+import org.eclipse.swt.dnd.Transfer;
 
 /**
  * Allows a single {@link PaletteTemplateEntry PaletteTemplateEntry} to be

@@ -16,19 +16,13 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.KeyEvent;
-import org.eclipse.swt.graphics.Cursor;
-
 import org.eclipse.core.runtime.Platform;
-
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.draw2d.geometry.Point;
 import org.eclipse.draw2d.geometry.PrecisionPoint;
 import org.eclipse.draw2d.geometry.PrecisionRectangle;
-
 import org.eclipse.gef.AutoexposeHelper;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPartViewer;
@@ -44,6 +38,9 @@ import org.eclipse.gef.commands.UnexecutableCommand;
 import org.eclipse.gef.editparts.LayerManager;
 import org.eclipse.gef.handles.HandleBounds;
 import org.eclipse.gef.requests.ChangeBoundsRequest;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.KeyEvent;
+import org.eclipse.swt.graphics.Cursor;
 
 /**
  * A DragTracker that moves {@link org.eclipse.gef.EditPart EditParts}.

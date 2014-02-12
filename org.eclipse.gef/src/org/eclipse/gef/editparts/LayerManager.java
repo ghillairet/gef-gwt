@@ -12,7 +12,6 @@
 package org.eclipse.gef.editparts;
 
 import org.eclipse.draw2d.IFigure;
-
 import org.eclipse.gef.EditPart;
 
 /**

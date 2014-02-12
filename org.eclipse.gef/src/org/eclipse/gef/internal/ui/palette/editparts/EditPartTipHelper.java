@@ -11,6 +11,8 @@
  *******************************************************************************/
 package org.eclipse.gef.internal.ui.palette.editparts;
 
+import org.eclipse.draw2d.IFigure;
+import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.events.MouseMoveListener;
@@ -24,9 +26,6 @@ import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
-
-import org.eclipse.draw2d.IFigure;
-import org.eclipse.draw2d.geometry.Dimension;
 
 class EditPartTipHelper extends org.eclipse.draw2d.PopUpHelper {
 

@@ -17,7 +17,6 @@ import java.util.List;
 
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.LayoutAnimator;
-
 import org.eclipse.gef.internal.ui.palette.editparts.DrawerEditPart;
 import org.eclipse.gef.internal.ui.palette.editparts.DrawerFigure;
 import org.eclipse.gef.ui.palette.PaletteViewerPreferences;

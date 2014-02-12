@@ -20,19 +20,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import org.eclipse.swt.graphics.Image;
-import org.eclipse.swt.widgets.Display;
-
-import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.ui.IMemento;
-
 import org.eclipse.draw2d.Border;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.draw2d.text.FlowPage;
 import org.eclipse.draw2d.text.TextFlow;
-
 import org.eclipse.gef.AccessibleEditPart;
 import org.eclipse.gef.DragTracker;
 import org.eclipse.gef.Request;
@@ -44,6 +37,10 @@ import org.eclipse.gef.tools.SelectEditPartTracker;
 import org.eclipse.gef.ui.palette.PaletteMessages;
 import org.eclipse.gef.ui.palette.PaletteViewer;
 import org.eclipse.gef.ui.palette.PaletteViewerPreferences;
+import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.ui.IMemento;
 
 /**
  * The abstract implementation of palette edit parts. All edit parts used in the

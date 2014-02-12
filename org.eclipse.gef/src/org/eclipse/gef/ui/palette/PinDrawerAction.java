@@ -11,10 +11,9 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.palette;
 
-import org.eclipse.jface.action.Action;
-
 import org.eclipse.gef.internal.ui.palette.editparts.DrawerEditPart;
 import org.eclipse.gef.ui.palette.editparts.IPinnableEditPart;
+import org.eclipse.jface.action.Action;
 
 /**
  * An action that can be used to pin the given pinnable palette editpart (drawer
