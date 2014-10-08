@@ -82,8 +82,7 @@ public abstract class Scrollable extends Control {
 		super(parent, style);
 	}
 
-	Scrollable(com.google.gwt.user.client.ui.Widget gwtWidget, Widget parent,
-			int style) {
+	Scrollable(com.google.gwt.user.client.ui.Widget gwtWidget, Widget parent, int style) {
 		super(gwtWidget, parent, style);
 	}
 

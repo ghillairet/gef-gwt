@@ -151,8 +151,7 @@ public abstract class Control extends Widget implements Drawable {
 		createWidget(0);
 	}
 
-	Control(com.google.gwt.user.client.ui.Widget gwtWidget, Widget parent,
-			int style) {
+	Control(com.google.gwt.user.client.ui.Widget gwtWidget, Widget parent, int style) {
 		super(gwtWidget, parent, style);
 		if (parent instanceof Composite) {
 			this.parent = (Composite) parent;

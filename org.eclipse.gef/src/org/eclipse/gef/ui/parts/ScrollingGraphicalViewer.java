@@ -22,6 +22,8 @@ import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 
+import com.google.gwt.canvas.client.Canvas;
+
 /**
  * A Graphical Viewer implementation which uses a
  * {@link org.eclipse.draw2d.FigureCanvas} for native scrolling. Because the
@@ -42,6 +44,13 @@ public class ScrollingGraphicalViewer extends GraphicalViewerImpl {
 	 * Constructs a ScrollingGraphicalViewer;
 	 */
 	public ScrollingGraphicalViewer() {
+	}
+	
+	public ScrollingGraphicalViewer(Canvas canvas) {
+//		org.eclipse.swt.widgets.Canvas c = new org.eclipse.swt.widgets.Canvas(canvas);
+		FigureCanvas fc = new FigureCanvas(canvas);
+		setControl(fc);
+		installRootFigure();
 	}
 
 	/**

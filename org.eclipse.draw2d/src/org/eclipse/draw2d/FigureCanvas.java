@@ -185,7 +185,7 @@ public class FigureCanvas extends Canvas {
 			if ((minVal < 0 || maxVal > defHeight && defHeight > 0)
 					&& scrollbarsVisible == false) {
 				canvasContainerElement.getStyle()
-						.setRight(SCROLL_SIZE, Unit.PX);
+				.setRight(SCROLL_SIZE, Unit.PX);
 				onResize();
 				scrollbarsVisible = true;
 			} else if (minVal >= 0 && maxVal <= defHeight
@@ -230,6 +230,16 @@ public class FigureCanvas extends Canvas {
 		super(canvas);
 		SCROLL_SIZE = 17;
 		this.lws = new LightweightSystem();
+		this.lws.setControl(this);
+		getHorizontalBar().setVisible(false);
+		getVerticalBar().setVisible(false);
+		hook();
+	}
+	
+	public FigureCanvas(com.google.gwt.canvas.client.Canvas canvas, LightweightSystem system) {
+		super(canvas);
+		SCROLL_SIZE = 17;
+		this.lws = system;
 		this.lws.setControl(this);
 		getHorizontalBar().setVisible(false);
 		getVerticalBar().setVisible(false);
@@ -304,21 +314,15 @@ public class FigureCanvas extends Canvas {
 	private void hookGWTScrolling() {
 		Viewport vp = getViewport();
 
-		vp.getHorizontalRangeModel().addPropertyChangeListener(
-				horizontalChangeListenerGWT);
-		vp.getVerticalRangeModel().addPropertyChangeListener(
-				verticalChangeListenerGWT);
-
+		vp.getHorizontalRangeModel().addPropertyChangeListener(horizontalChangeListenerGWT);
+		vp.getVerticalRangeModel().addPropertyChangeListener(verticalChangeListenerGWT);
 	}
 
 	private void unhookGWTScrolling() {
 		Viewport vp = getViewport();
 
-		vp.getHorizontalRangeModel().removePropertyChangeListener(
-				horizontalChangeListenerGWT);
-		vp.getVerticalRangeModel().removePropertyChangeListener(
-				verticalChangeListenerGWT);
-
+		vp.getHorizontalRangeModel().removePropertyChangeListener(horizontalChangeListenerGWT);
+		vp.getVerticalRangeModel().removePropertyChangeListener(verticalChangeListenerGWT);
 	}
 
 	/**
@@ -421,8 +425,7 @@ public class FigureCanvas extends Canvas {
 	private void hook() {
 		getLightweightSystem().getUpdateManager().addUpdateListener(
 				new UpdateListener() {
-					public void notifyPainting(Rectangle damage,
-							java.util.Map dirtyRegions) {
+					public void notifyPainting(Rectangle damage, java.util.Map dirtyRegions) {
 					}
 
 					public void notifyValidating() {
@@ -443,15 +446,18 @@ public class FigureCanvas extends Canvas {
 			}
 		});
 
-		final ScrollPanel sp = (ScrollPanel) getSimplePanel().getParent();
+		if (getSimplePanel() != null) {
+			final ScrollPanel sp = (ScrollPanel) getSimplePanel().getParent();
 
-		sp.addScrollHandler(new ScrollHandler() {
-
-			@Override
-			public void onScroll(ScrollEvent event) {
-				scroll(sp);
+			if (sp != null) {
+				sp.addScrollHandler(new ScrollHandler() {
+					@Override
+					public void onScroll(ScrollEvent event) {
+						scroll(sp);
+					}
+				});
 			}
-		});
+		}
 	}
 
 	private void scroll(ScrollPanel sp) {

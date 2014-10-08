@@ -69,8 +69,7 @@ public class Composite extends Scrollable {
 		/* Do nothing */
 	}
 
-	public Composite(com.google.gwt.user.client.ui.Widget gwtWidget,
-			Widget parent, int style) {
+	public Composite(com.google.gwt.user.client.ui.Widget gwtWidget, Widget parent, int style) {
 		super(gwtWidget, parent, style);
 	}
 

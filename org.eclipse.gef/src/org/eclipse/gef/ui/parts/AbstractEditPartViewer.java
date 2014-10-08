@@ -94,7 +94,6 @@ public abstract class AbstractEditPartViewer implements EditPartViewer {
 	private Map mapIDToEditPart = new HashMap();
 	private Map mapVisualToEditPart = new HashMap();
 	private Map properties;
-	private Control control;
 	private ResourceManager resources;
 	private EditDomain domain;
 	private RootEditPart rootEditPart;
@@ -108,6 +107,8 @@ public abstract class AbstractEditPartViewer implements EditPartViewer {
 
 	private KeyHandler keyHandler;
 	private PropertyChangeSupport changeSupport;
+
+	protected Control control;
 
 	/**
 	 * Constructs the viewer and calls {@link #init()}.

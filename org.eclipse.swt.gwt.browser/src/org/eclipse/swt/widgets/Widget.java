@@ -271,8 +271,7 @@ public abstract class Widget {
 		this(null, parent, style);
 	}
 
-	Widget(com.google.gwt.user.client.ui.Widget gwtWidget, Widget parent,
-			int style) {
+	Widget(com.google.gwt.user.client.ui.Widget gwtWidget, Widget parent, int style) {
 		this.gwtWidget = gwtWidget;
 		checkSubclass();
 		this.style = style;

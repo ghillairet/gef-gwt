@@ -93,11 +93,9 @@ public class Canvas extends Composite {
 	 * @see Widget#getStyle
 	 */
 	public Canvas(Composite parent, int style) {
-		super(com.google.gwt.canvas.client.Canvas.createIfSupported(), parent,
-				checkStyle(style));
+		super(com.google.gwt.canvas.client.Canvas.createIfSupported(), parent, checkStyle(style));
 		this.canvas = (com.google.gwt.canvas.client.Canvas) getGwtWidget();
-		com.google.gwt.user.client.ui.Widget parentGwtWidget = parent
-				.getGwtWidget();
+		com.google.gwt.user.client.ui.Widget parentGwtWidget = parent.getGwtWidget();
 
 		LayoutPanel parentWidget = (LayoutPanel) parentGwtWidget;
 		LayoutPanel innerPanel = new LayoutPanel() {
@@ -113,7 +111,6 @@ public class Canvas extends Composite {
 			public void onAttachOrDetach(AttachEvent event) {
 				if (event.isAttached()) {
 					Scheduler.get().scheduleDeferred(new ScheduledCommand() {
-
 						@Override
 						public void execute() {
 							Canvas.this.onResize();
@@ -124,7 +121,6 @@ public class Canvas extends Composite {
 		});
 
 		this.canvas.addMouseOverHandler(new MouseOverHandler() {
-
 			@Override
 			public void onMouseOver(MouseOverEvent event) {
 				turnTextSelectionOff();
@@ -132,7 +128,6 @@ public class Canvas extends Composite {
 		});
 
 		this.canvas.addMouseOutHandler(new MouseOutHandler() {
-
 			@Override
 			public void onMouseOut(MouseOutEvent event) {
 				turnTextSelectionOn();
@@ -162,7 +157,6 @@ public class Canvas extends Composite {
 	public Canvas(com.google.gwt.canvas.client.Canvas canvas) {
 		super(canvas, null, SWT.None);
 		this.canvas = canvas;
-
 	}
 
 	@Override
