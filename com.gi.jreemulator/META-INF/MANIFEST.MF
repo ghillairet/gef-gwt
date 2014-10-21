@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Bundle-Vendor: GI
-Bundle-Version: 3.7.0.201210270855
-Bundle-Name: Jreemulator
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: com.gi.jreemulator
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-
-

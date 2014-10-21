@@ -1,28 +1,41 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.eclipselabs</groupId>
 	<artifactId>gef-gwt</artifactId>
-	<packaging>pom</packaging>
 	<version>3.7.0-SNAPSHOT</version>
 
-	<modules>
-        <module>org.eclipse.core.commands</module>
-        <module>org.eclipse.core.runtime</module>
-        <module>org.eclipse.draw2d</module>
-        <module>org.eclipse.equinox.common</module>
-        <module>org.eclipse.equinox.preferences2</module>
-        <module>org.eclipse.gef</module>
-        <module>org.eclipse.jface</module>
-        <module>org.eclipse.osgi2</module>
-        <module>org.eclipse.swt</module>
-        <module>org.eclipse.swt.gwt.browser</module>
-        <module>org.eclipse.ui.views</module>
-        <module>org.osgi.framework</module>
-        <module>com.gi.jreemulator</module>
-        <module>com.ibm.icu</module>
-	</modules>
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
+
+	<licenses>
+		<license>
+			<name>EPL</name>
+			<url>www.eclipse.org/legal/epl-v10.html</url>
+		</license>
+	</licenses>
+
+	<scm>
+		<connection>scm:git:git://github.com/ghillairet/gef-gwt.git</connection>
+		<developerConnection>scm:git:git@github.com:ghillairet/gef-gwt.git</developerConnection>
+		<url>https://github.com/ghillairet/gef-gwt/</url>
+	</scm>
+
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/ghillairet/gef-gwt/issues</url>
+	</issueManagement>
+
+	<developers>
+		<developer>
+			<id>ghillairet</id>
+			<name>G. Hillairet</name>
+			<email>g.hillairet@gmail.com</email>
+		</developer>
+	</developers>
 
 	<properties>
 		<gwtVersion>2.6.1</gwtVersion>
@@ -30,6 +43,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
+		<additionalparam>-Xdoclint:none</additionalparam>
 	</properties>
 
 	<dependencies>
@@ -47,30 +61,23 @@
 	</dependencies>
 
 	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>gwt-maven-plugin</artifactId>
-					<version>${gwtVersion}</version>
-					<executions>
-						<execution>
-							<goals>
-								<goal>resources</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<configuration>
-						<source>1.7</source>
-						<target>1.7</target>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.java</include>
+					<include>**/*.gif</include>
+					<include>**/*.cur</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.java</include>
+					<include>**/*.gwt.xml</include>
+				</includes>
+			</resource>
+		</resources>
 	</build>
 
 </project>

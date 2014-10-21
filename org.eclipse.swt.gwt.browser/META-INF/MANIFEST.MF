@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Fragment-Host: org.eclipse.swt
-Bundle-Version: 3.7.1.201210270855
-Bundle-Name: SWT Gwt port
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: org.eclipse.swt.gwt.browser
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-
-
