@@ -11,7 +11,6 @@
  *******************************************************************************/
 package org.eclipse.gef.ui.parts;
 
-import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -562,7 +561,7 @@ public class GraphicalViewerKeyHandler extends KeyHandler {
 		if (node == null)
 			cachedNode = null;
 		else
-			cachedNode = new WeakReference(node);
+			cachedNode = node;
 	}
 
 }
