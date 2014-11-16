@@ -10,11 +10,7 @@
  *******************************************************************************/
 package org.eclipse.jface.resource;
 
-import java.io.IOException;
-import java.io.InputStream;
-
 import org.eclipse.jface.internal.InternalPolicy;
-import org.eclipse.swt.SWT;
 import org.eclipse.swt.SWTException;
 import org.eclipse.swt.graphics.Device;
 import org.eclipse.swt.graphics.Image;
@@ -75,63 +71,64 @@ class FileImageDescriptor extends ImageDescriptor {
 		return name.equals(other.name);
 	}
 
-	/**
-	 * @see org.eclipse.jface.resource.ImageDescriptor#getImageData() The
-	 *      FileImageDescriptor implementation of this method is not used by
-	 *      {@link ImageDescriptor#createImage(boolean, Device)} as of version
-	 *      3.4 so that the SWT OS optimised loading can be used.
-	 */
+//	/**
+//	 * @see org.eclipse.jface.resource.ImageDescriptor#getImageData() The
+//	 *      FileImageDescriptor implementation of this method is not used by
+//	 *      {@link ImageDescriptor#createImage(boolean, Device)} as of version
+//	 *      3.4 so that the SWT OS optimised loading can be used.
+//	 */
 	public ImageData getImageData() {
-		InputStream in = getStream();
-		ImageData result = null;
-		if (in != null) {
-			try {
-				// result = new ImageData(in);
-			} catch (SWTException e) {
-				if (e.code != SWT.ERROR_INVALID_IMAGE) {
-					throw e;
-					// fall through otherwise
-				}
-			} finally {
-				try {
-					in.close();
-				} catch (IOException e) {
-					// System.err.println(getClass().getName()+".getImageData():
-					// "+
-					// "Exception while closing InputStream : "+e);
-				}
-			}
-		}
-		return result;
-	}
-
-	/**
-	 * Returns a stream on the image contents. Returns null if a stream could
-	 * not be opened.
-	 * 
-	 * @return the buffered stream on the file or <code>null</code> if the file
-	 *         cannot be found
-	 */
-	private InputStream getStream() {
-		InputStream is = null;
-
-		if (location != null) {
-			// is = location.getResourceAsStream(name);
-
-		} else {
-			// try {
-			// is = new FileInputStream(name);
-			// } catch (FileNotFoundException e) {
-			return null;
-			// }
-		}
-		if (is == null) {
-			return null;
-		}
-		// return new BufferedInputStream(is);
+//		InputStream in = getStream();
+//		ImageData result = null;
+//		if (in != null) {
+//			try {
+//				// result = new ImageData(in);
+//			} catch (SWTException e) {
+//				if (e.code != SWT.ERROR_INVALID_IMAGE) {
+//					throw e;
+//					// fall through otherwise
+//				}
+//			} finally {
+//				try {
+//					in.close();
+//				} catch (IOException e) {
+//					// System.err.println(getClass().getName()+".getImageData():
+//					// "+
+//					// "Exception while closing InputStream : "+e);
+//				}
+//			}
+//		}
+//		return result;
 		return null;
-
 	}
+
+//	/**
+//	 * Returns a stream on the image contents. Returns null if a stream could
+//	 * not be opened.
+//	 * 
+//	 * @return the buffered stream on the file or <code>null</code> if the file
+//	 *         cannot be found
+//	 */
+//	private InputStream getStream() {
+//		InputStream is = null;
+//
+//		if (location != null) {
+//			// is = location.getResourceAsStream(name);
+//
+//		} else {
+//			// try {
+//			// is = new FileInputStream(name);
+//			// } catch (FileNotFoundException e) {
+//			return null;
+//			// }
+//		}
+//		if (is == null) {
+//			return null;
+//		}
+//		// return new BufferedInputStream(is);
+//		return null;
+//
+//	}
 
 	/*
 	 * (non-Javadoc) Method declared on Object.
