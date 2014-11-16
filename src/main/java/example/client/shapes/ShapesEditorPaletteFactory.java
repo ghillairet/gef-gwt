@@ -32,7 +32,7 @@ import example.client.shapes.model.RectangularShape;
  * @see #createPalette()
  * @author Elias Volanakis
  */
-final class ShapesEditorPaletteFactory {
+public final class ShapesEditorPaletteFactory {
 
 	/** Create the "Shapes" drawer. */
 	private static PaletteContainer createShapesDrawer() {
@@ -64,7 +64,7 @@ final class ShapesEditorPaletteFactory {
 	 * 
 	 * @return a new PaletteRoot
 	 */
-	static PaletteRoot createPalette() {
+	public static PaletteRoot createPalette() {
 		PaletteRoot palette = new PaletteRoot();
 		palette.add(createToolsGroup(palette));
 		palette.add(createShapesDrawer());

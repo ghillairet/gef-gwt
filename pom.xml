@@ -5,7 +5,7 @@
 	<groupId>org.eclipselabs</groupId>
 	<artifactId>gef-gwt-sample</artifactId>
 	<packaging>war</packaging>
-	<version>3.7.0</version>
+	<version>3.7.1</version>
 
 	<properties>
 		<gwt.module>example.App</gwt.module>
@@ -30,7 +30,7 @@
 		<dependency>
 			<groupId>org.eclipselabs</groupId>
 			<artifactId>gef-gwt</artifactId>
-			<version>3.7.0</version>
+			<version>3.7.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
