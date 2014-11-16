@@ -13,8 +13,9 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.RootPanel;
-import com.google.gwt.user.client.ui.VerticalPanel;
 
 import example.client.shapes.ShapesEditorPaletteFactory;
 import example.client.shapes.model.RectangularShape;
@@ -25,7 +26,7 @@ public class App implements EntryPoint {
 
 	@Override
 	public void onModuleLoad() {
-		VerticalPanel panel = new VerticalPanel();
+		HorizontalPanel panel = new HorizontalPanel();
 
 		GraphicalViewer viewer = new ScrollingGraphicalViewer();
 		ScalableFreeformRootEditPart root = new ScalableFreeformRootEditPart();
@@ -35,7 +36,7 @@ public class App implements EntryPoint {
 		viewer.setContents(createContent());
 
 		Composite c1 = new Composite(null, SWT.NONE);
-		c1.setSize(1024, 1024);
+		c1.setSize(800, 600);
 		viewer.createControl(c1);
 
 		PaletteRoot paletteRoot = ShapesEditorPaletteFactory.createPalette();
@@ -46,9 +47,9 @@ public class App implements EntryPoint {
 		paletteViewer.setContents(paletteRoot);
 		c2.setSize(120, 200);
 
-		panel.add(c1.getGwtWidget());
 		panel.add(c2.getGwtWidget());
-		RootPanel.get().add(panel);
+		panel.add(c1.getGwtWidget());
+		RootLayoutPanel.get().add(panel);
 	}
 
 	public Object createContent() {
