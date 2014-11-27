@@ -12,7 +12,6 @@ package org.eclipse.core.runtime;
 
 import org.eclipse.core.runtime.preferences.DefaultScope;
 import org.eclipse.core.runtime.preferences.IEclipsePreferences;
-import org.eclipse.core.runtime.preferences.IPreferencesService;
 
 /**
  * A table of preference settings, mapping named properties to values. Property

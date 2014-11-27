@@ -2046,7 +2046,7 @@ public class ContentProposalAdapter {
 					receivedKeyDown = false;
 					try {
 						Thread.sleep(autoActivationDelay);
-					} catch (InterruptedException e) {
+					} catch (Exception e) {
 					}
 					if (!isValid() || receivedKeyDown) {
 						return;

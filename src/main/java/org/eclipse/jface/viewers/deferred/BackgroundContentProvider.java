@@ -348,7 +348,7 @@ import org.eclipse.jface.viewers.deferred.ConcurrentTableUpdator.Range;
 					updator.replace(object, i);
 				}
 
-            } catch (InterruptedException e) {
+            } catch (Exception e) {
             	continue;
             }
             

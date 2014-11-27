@@ -13,7 +13,6 @@
  *******************************************************************************/
 package org.eclipse.jface.wizard;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -1047,9 +1046,7 @@ public class WizardDialog extends TitleAreaDialog implements IWizardContainer2,
 	 * operation will be nullified when original UI state is restored.
 	 * 
 	 */
-	public void run(boolean fork, boolean cancelable,
-			IRunnableWithProgress runnable) throws InvocationTargetException,
-			InterruptedException {
+	public void run(boolean fork, boolean cancelable, IRunnableWithProgress runnable) {
 		// The operation can only be canceled if it is executed in a separate
 		// thread.
 		// Otherwise the UI is blocked anyway.

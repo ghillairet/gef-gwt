@@ -10,8 +10,6 @@
  *******************************************************************************/
 package org.eclipse.jface.dialogs;
 
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IProgressMonitorWithBlocking;
 import org.eclipse.core.runtime.IStatus;
@@ -498,9 +496,7 @@ public class ProgressMonitorDialog extends IconAndMessageDialog implements
 	 * responsibility to call <code>Display.readAndDispatch()</code> to ensure
 	 * UI responsiveness.
 	 */
-	public void run(boolean fork, boolean cancelable,
-			IRunnableWithProgress runnable) throws InvocationTargetException,
-			InterruptedException {
+	public void run(boolean fork, boolean cancelable,IRunnableWithProgress runnable) {
 		setCancelable(cancelable);
 		try {
 			aboutToRun();

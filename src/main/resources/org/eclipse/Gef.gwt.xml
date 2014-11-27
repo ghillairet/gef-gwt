@@ -4,9 +4,7 @@
 	<inherits name="com.google.gwt.user.User" />
 	<inherits name="com.ibm.icu.Icu" />
 	<inherits name="com.googlecode.gwtx.java.Beans" />
-<!-- 	<inherits name="java.Emul" /> -->
 	<inherits name="org.osgi.Osgi" />
-	<!-- <inherits name="com.allen_sauer.gwt.log.gwt-log-DEBUG" /> -->
 
 	<source path="" />
 

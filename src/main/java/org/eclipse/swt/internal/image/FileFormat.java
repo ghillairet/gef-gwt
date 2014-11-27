@@ -1,8 +1,5 @@
 package org.eclipse.swt.internal.image;
 
-import java.io.OutputStream;
-
-import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.ImageData;
 import org.eclipse.swt.graphics.ImageLoader;
 
@@ -17,7 +14,7 @@ public abstract class FileFormat {
 	static final String[] FORMATS = {
 			"WinBMP", "WinBMP", "GIF", "WinICO", "JPEG", "PNG", "TIFF", "OS2BMP" }; //$NON-NLS-1$//$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$//$NON-NLS-5$ //$NON-NLS-6$//$NON-NLS-7$//$NON-NLS-8$
 
-	LEDataOutputStream outputStream;
+//	LEDataOutputStream outputStream;
 	ImageLoader loader;
 	int compression;
 
@@ -82,54 +79,54 @@ public abstract class FileFormat {
 	 * Write the device independent image array stored in the specified loader
 	 * to the specified output stream using the specified file format.
 	 */
-	public static void save(OutputStream os, int format, ImageLoader loader) {
-		if (format < 0 || format >= FORMATS.length)
-			SWT.error(SWT.ERROR_UNSUPPORTED_FORMAT);
-		if (FORMATS[format] == null)
-			SWT.error(SWT.ERROR_UNSUPPORTED_FORMAT);
-		if (loader.data == null || loader.data.length < 1)
-			SWT.error(SWT.ERROR_INVALID_ARGUMENT);
-
-		LEDataOutputStream stream = new LEDataOutputStream(os);
-		FileFormat fileFormat = null;
-		try {
-			// Class clazz = Class.forName(FORMAT_PACKAGE + '.' +
-			// FORMATS[format]
-			// + FORMAT_SUFFIX);
-			// fileFormat = (FileFormat) clazz.newInstance();
-		} catch (Exception e) {
-			SWT.error(SWT.ERROR_UNSUPPORTED_FORMAT);
-		}
-		if (format == SWT.IMAGE_BMP_RLE) {
-			switch (loader.data[0].depth) {
-			case 8:
-				fileFormat.compression = 1;
-				break;
-			case 4:
-				fileFormat.compression = 2;
-				break;
-			}
-		}
-		fileFormat.unloadIntoStream(loader, stream);
-	}
+//	public static void save(OutputStream os, int format, ImageLoader loader) {
+//		if (format < 0 || format >= FORMATS.length)
+//			SWT.error(SWT.ERROR_UNSUPPORTED_FORMAT);
+//		if (FORMATS[format] == null)
+//			SWT.error(SWT.ERROR_UNSUPPORTED_FORMAT);
+//		if (loader.data == null || loader.data.length < 1)
+//			SWT.error(SWT.ERROR_INVALID_ARGUMENT);
+//
+//		LEDataOutputStream stream = new LEDataOutputStream(os);
+//		FileFormat fileFormat = null;
+//		try {
+//			// Class clazz = Class.forName(FORMAT_PACKAGE + '.' +
+//			// FORMATS[format]
+//			// + FORMAT_SUFFIX);
+//			// fileFormat = (FileFormat) clazz.newInstance();
+//		} catch (Exception e) {
+//			SWT.error(SWT.ERROR_UNSUPPORTED_FORMAT);
+//		}
+//		if (format == SWT.IMAGE_BMP_RLE) {
+//			switch (loader.data[0].depth) {
+//			case 8:
+//				fileFormat.compression = 1;
+//				break;
+//			case 4:
+//				fileFormat.compression = 2;
+//				break;
+//			}
+//		}
+//		fileFormat.unloadIntoStream(loader, stream);
+//	}
 
 	abstract void unloadIntoByteStream(ImageLoader loader);
 
-	/**
-	 * Write the device independent image array stored in the specified loader
-	 * to the specified output stream.
-	 */
-	public void unloadIntoStream(ImageLoader loader, LEDataOutputStream stream) {
-		try {
-			outputStream = stream;
-			unloadIntoByteStream(loader);
-			// outputStream.flush();
-		} catch (Exception e) {
-			try {
-				// outputStream.flush();
-			} catch (Exception f) {
-			}
-			SWT.error(SWT.ERROR_IO, e);
-		}
-	}
+//	/**
+//	 * Write the device independent image array stored in the specified loader
+//	 * to the specified output stream.
+//	 */
+//	public void unloadIntoStream(ImageLoader loader, LEDataOutputStream stream) {
+//		try {
+//			outputStream = stream;
+//			unloadIntoByteStream(loader);
+//			// outputStream.flush();
+//		} catch (Exception e) {
+//			try {
+//				// outputStream.flush();
+//			} catch (Exception f) {
+//			}
+//			SWT.error(SWT.ERROR_IO, e);
+//		}
+//	}
 }

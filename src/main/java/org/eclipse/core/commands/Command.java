@@ -10,10 +10,6 @@
  *******************************************************************************/
 package org.eclipse.core.commands;
 
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.StringWriter;
-
 import org.eclipse.core.commands.common.NotDefinedException;
 import org.eclipse.core.commands.util.Tracing;
 import org.eclipse.core.internal.commands.util.Util;
@@ -1024,40 +1020,37 @@ public final class Command extends NamedHandleObjectWithState implements
 	 */
 	public final String toString() {
 		if (string == null) {
-			final StringWriter sw = new StringWriter();
-			final BufferedWriter buffer = new BufferedWriter(sw);
-			try {
-				buffer.write("Command("); //$NON-NLS-1$
-				buffer.write(id);
-				buffer.write(',');
-				buffer.write(name==null?"":name); //$NON-NLS-1$
-				buffer.write(',');
-				buffer.newLine();
-				buffer.write("\t\t"); //$NON-NLS-1$
-				buffer.write(description==null?"":description); //$NON-NLS-1$
-				buffer.write(',');
-				buffer.newLine();
-				buffer.write("\t\t"); //$NON-NLS-1$
-				buffer.write(category==null?"":category.toString()); //$NON-NLS-1$
-				buffer.write(',');
-				buffer.newLine();
-				buffer.write("\t\t"); //$NON-NLS-1$
-				buffer.write(handler==null?"":handler.toString()); //$NON-NLS-1$
-				buffer.write(',');
-				buffer.newLine();
-				buffer.write("\t\t"); //$NON-NLS-1$
-				buffer.write(parameters==null?"":parameters.toString()); //$NON-NLS-1$
-				buffer.write(',');
-				buffer.write(returnType==null?"":returnType.toString()); //$NON-NLS-1$
-				buffer.write(',');
-				buffer.write(""+defined); //$NON-NLS-1$
-				buffer.write(')');
-				buffer.flush();
-			} catch (IOException e) {
-				// should never get this exception
-			}
-			string = sw.toString();
+			final String sw = new String();
+
+			sw.concat("Command("); //$NON-NLS-1$
+			sw.concat(id);
+			sw.concat(",");
+			sw.concat(name==null?"":name); //$NON-NLS-1$
+			sw.concat(",");
+			sw.concat("\n");
+			sw.concat("\t\t"); //$NON-NLS-1$
+			sw.concat(description==null?"":description); //$NON-NLS-1$
+			sw.concat(",");
+			sw.concat("\n");
+			sw.concat("\t\t"); //$NON-NLS-1$
+			sw.concat(category==null?"":category.toString()); //$NON-NLS-1$
+			sw.concat(",");
+			sw.concat("\n");
+			sw.concat("\t\t"); //$NON-NLS-1$
+			sw.concat(handler==null?"":handler.toString()); //$NON-NLS-1$
+			sw.concat(",");
+			sw.concat("\n");
+			sw.concat("\t\t"); //$NON-NLS-1$
+			sw.concat(parameters==null?"":parameters.toString()); //$NON-NLS-1$
+			sw.concat(",");
+			sw.concat(returnType==null?"":returnType.toString()); //$NON-NLS-1$
+			sw.concat(",");
+			sw.concat(""+defined); //$NON-NLS-1$
+			sw.concat(")");
+
+			string = sw;
 		}
+
 		return string;
 	}
 

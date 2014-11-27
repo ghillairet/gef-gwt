@@ -12,8 +12,6 @@
 
 package org.eclipse.jface.window;
 
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.jface.action.CoolBarManager;
 import org.eclipse.jface.action.ICoolBarManager;
@@ -702,9 +700,7 @@ public class ApplicationWindow extends Window implements IRunnableContext {
 	 * is the runnable's responsibility to call
 	 * <code>Display.readAndDispatch()</code> to ensure UI responsiveness.
 	 */
-	public void run(final boolean fork, boolean cancelable,
-			final IRunnableWithProgress runnable)
-			throws InvocationTargetException, InterruptedException {
+	public void run(final boolean fork, boolean cancelable, final IRunnableWithProgress runnable) {
 		try {
 			operationInProgress = true;
 			final StatusLineManager mgr = getStatusLineManager();
@@ -783,10 +779,8 @@ public class ApplicationWindow extends Window implements IRunnableContext {
 				});
 
 				if (holder[0] != null) {
-					if (holder[0] instanceof InvocationTargetException) {
-						throw (InvocationTargetException) holder[0];
-					} else if (holder[0] instanceof InterruptedException) {
-						throw (InterruptedException) holder[0];
+					if (holder[0] instanceof Exception) {
+						return;
 					}
 				}
 			} finally {

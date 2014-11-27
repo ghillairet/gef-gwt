@@ -11,14 +11,10 @@
  *******************************************************************************/
 package org.eclipse.swt.graphics;
 
-import java.io.IOException;
-import java.io.OutputStream;
 import java.util.Vector;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.SWTException;
-import org.eclipse.swt.internal.Compatibility;
-import org.eclipse.swt.internal.image.FileFormat;
 
 /**
  * Instances of this class are used to load images from, and save images to, a
@@ -209,11 +205,11 @@ public class ImageLoader {
 	 *                saved to the requested format</li>
 	 *                </ul>
 	 */
-	public void save(OutputStream stream, int format) {
-		if (stream == null)
-			SWT.error(SWT.ERROR_NULL_ARGUMENT);
-		FileFormat.save(stream, format, this);
-	}
+//	public void save(OutputStream stream, int format) {
+//		if (stream == null)
+//			SWT.error(SWT.ERROR_NULL_ARGUMENT);
+//		FileFormat.save(stream, format, this);
+//	}
 
 	/**
 	 * Saves the image data in this ImageLoader to a file with the specified
@@ -255,13 +251,13 @@ public class ImageLoader {
 	public void save(String filename, int format) {
 		if (filename == null)
 			SWT.error(SWT.ERROR_NULL_ARGUMENT);
-		OutputStream stream = null;
-		try {
-			stream = Compatibility.newFileOutputStream(filename);
-		} catch (IOException e) {
-			SWT.error(SWT.ERROR_IO, e);
-		}
-		save(stream, format);
+//		OutputStream stream = null;
+//		try {
+//			stream = Compatibility.newFileOutputStream(filename);
+//		} catch (IOException e) {
+//			SWT.error(SWT.ERROR_IO, e);
+//		}
+//		save(stream, format);
 		// try {
 		// stream.close();
 		// } catch (IOException e) {

@@ -355,7 +355,7 @@ public class LazySortedCollection {
      * was replaced during the removal)
      * @since 3.1
      */
-    private final int partition(int subTree, FastProgressReporter mon) throws InterruptedException {
+    private final int partition(int subTree, FastProgressReporter mon) {
         if (subTree == -1) {
             return -1;
         }
@@ -375,7 +375,7 @@ public class LazySortedCollection {
             }
             
             if (mon.isCanceled()) {
-                throw new InterruptedException();
+                throw new RuntimeException();
             }
         }
         
@@ -848,9 +848,8 @@ public class LazySortedCollection {
      * 
      * @param n number of items to retain
      * @param mon progress monitor
-     * @throws InterruptedException if the progress monitor is cancelled in another thread
      */
-    /* package */ final void retainFirst(int n, FastProgressReporter mon) throws InterruptedException {
+    /* package */ final void retainFirst(int n, FastProgressReporter mon) {
         int sz = size();
         
         if (n >= sz) {
@@ -872,7 +871,7 @@ public class LazySortedCollection {
     public final void retainFirst(int n) {
         try {
             retainFirst(n, new FastProgressReporter());
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
         }
         
         testInvariants();
@@ -889,7 +888,7 @@ public class LazySortedCollection {
     public final void removeRange(int first, int length) {
         try {
             removeRange(first, length, new FastProgressReporter());
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
         }
         
         testInvariants();
@@ -906,17 +905,20 @@ public class LazySortedCollection {
      * @param first 0-based index of the smallest item to remove
      * @param length number of items to remove
      * @param mon progress monitor
-     * @throws InterruptedException if the progress monitor is cancelled in another thread
      */
-    /* package */ final void removeRange(int first, int length, FastProgressReporter mon) throws InterruptedException {
-    	removeRange(root, first, length, mon);
+    /* package */ final void removeRange(int first, int length, FastProgressReporter mon) {
+    	try {
+			removeRange(root, first, length, mon);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
     	
     	pack();
     	
     	testInvariants();
     }
     
-    private final void removeRange(int node, int rangeStart, int rangeLength, FastProgressReporter mon) throws InterruptedException {
+    private final void removeRange(int node, int rangeStart, int rangeLength, FastProgressReporter mon) {
     	if (rangeLength == 0) {
     		return;
     	}
@@ -1055,7 +1057,7 @@ public class LazySortedCollection {
 
                 try {
                     result = partition(result, new FastProgressReporter());
-                } catch (InterruptedException e) {
+                } catch (Exception e) {
                     
                 }
                 if (result == -1) {
@@ -1203,10 +1205,15 @@ public class LazySortedCollection {
      * @param mon monitor used to report progress and check for cancellation
      * @return the number of items inserted into the result array. This will be equal to the minimum
      * of result.length and container.size()
-     * @throws InterruptedException if the progress monitor is cancelled
      */
-    /* package */ final int getFirst(Object[] result, boolean sorted, FastProgressReporter mon) throws InterruptedException {
-        int returnValue = getRange(result, 0, sorted, mon);
+    /* package */ final int getFirst(Object[] result, boolean sorted, FastProgressReporter mon) {
+        int returnValue = -1;
+		try {
+			returnValue = getRange(result, 0, sorted, mon);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         
         testInvariants();
         
@@ -1229,7 +1236,7 @@ public class LazySortedCollection {
         
         try {
             returnValue = getFirst(result, sorted, new FastProgressReporter());
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
         }
         
         testInvariants();
@@ -1252,10 +1259,14 @@ public class LazySortedCollection {
      * @param rangeStart index of the smallest element to appear in the result
      * @param sorted true iff the result array should be sorted
      * @param mon progress monitor used to cancel the operation
-     * @throws InterruptedException if the progress monitor was cancelled in another thread
      */
-    /* package */ final int getRange(Object[] result, int rangeStart, boolean sorted, FastProgressReporter mon) throws InterruptedException {
-        return getRange(result, 0, rangeStart, root, sorted, mon);
+    /* package */ final int getRange(Object[] result, int rangeStart, boolean sorted, FastProgressReporter mon) {
+        try {
+			return getRange(result, 0, rangeStart, root, sorted, mon);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return -1;
+		}
     }
     
     /**
@@ -1276,7 +1287,7 @@ public class LazySortedCollection {
         
         try {
             returnValue = getRange(result, rangeStart, sorted, new FastProgressReporter());
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
         }
         
         testInvariants();
@@ -1294,7 +1305,7 @@ public class LazySortedCollection {
         Object[] result = new Object[1];
         try {
             getRange(result, index, false, new FastProgressReporter());
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             // shouldn't happen
         }
         Object returnValue = result[0];
@@ -1320,7 +1331,7 @@ public class LazySortedCollection {
         return result;
     }
     
-    private final int getRange(Object[] result, int resultIdx, int rangeStart, int node, boolean sorted, FastProgressReporter mon) throws InterruptedException {
+    private final int getRange(Object[] result, int resultIdx, int rangeStart, int node, boolean sorted, FastProgressReporter mon) {
         if (node == -1) {
             return 0;
         }
@@ -1334,7 +1345,12 @@ public class LazySortedCollection {
             }
         }
         
-        node = partition(node, mon);
+        try {
+			node = partition(node, mon);
+		} catch (Exception e) {
+			node = -1;
+		}
+
         if (node == -1) {
             return 0;
         }
@@ -1373,7 +1389,7 @@ public class LazySortedCollection {
      * @return the number of children added to the array
      * @since 3.1
      */
-    private final int getChildren(Object[] result, int resultIdx, int node, boolean sorted, FastProgressReporter mon) throws InterruptedException {
+    private final int getChildren(Object[] result, int resultIdx, int node, boolean sorted, FastProgressReporter mon) {
         if (node == -1) {
             return 0;
         }
@@ -1381,7 +1397,11 @@ public class LazySortedCollection {
         int tempIdx = resultIdx;
         
         if (sorted) {
-            node = partition(node, mon);
+            try {
+				node = partition(node, mon);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
             if (node == -1) {
                 return 0;
             }

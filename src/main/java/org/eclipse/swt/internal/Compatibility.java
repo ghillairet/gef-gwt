@@ -12,7 +12,6 @@
 package org.eclipse.swt.internal;
 
 import java.io.IOException;
-import java.io.OutputStream;
 
 import org.eclipse.swt.SWT;
 
@@ -173,11 +172,11 @@ public final class Compatibility {
 	 * 
 	 * @since 3.4
 	 */
-	public static OutputStream newDeflaterOutputStream(OutputStream stream)
-			throws IOException {
-		// return new DeflaterOutputStream(stream);
-		return null;
-	}
+//	public static OutputStream newDeflaterOutputStream(OutputStream stream)
+//			throws IOException {
+//		// return new DeflaterOutputStream(stream);
+//		return null;
+//	}
 
 	/**
 	 * Open a file if such things are supported.
@@ -200,11 +199,11 @@ public final class Compatibility {
 	 * @return a stream on the file if it could be opened.
 	 * @exception IOException
 	 */
-	public static OutputStream newFileOutputStream(String filename)
-			throws IOException {
-		// return new FileOutputStream(filename);
-		return null;
-	}
+//	public static OutputStream newFileOutputStream(String filename)
+//			throws IOException {
+//		// return new FileOutputStream(filename);
+//		return null;
+//	}
 
 	/**
 	 * Create an InflaterInputStream if such things are supported.
@@ -277,8 +276,6 @@ public final class Compatibility {
 	 * 
 	 * @exception IOException
 	 *                if the program cannot be executed
-	 * @exception SecurityException
-	 *                if the current SecurityManager disallows program execution
 	 */
 	public static void exec(String prog) throws java.io.IOException {
 		// Runtime.getRuntime().exec(prog);
@@ -296,8 +293,6 @@ public final class Compatibility {
 	 * 
 	 * @exception IOException
 	 *                if the program cannot be executed
-	 * @exception SecurityException
-	 *                if the current SecurityManager disallows program execution
 	 */
 	public static void exec(String[] progArray) throws java.io.IOException {
 		// Runtime.getRuntime().exec(progArray);
@@ -321,8 +316,6 @@ public final class Compatibility {
 	 * 
 	 * @exception IOException
 	 *                if the program cannot be executed
-	 * @exception SecurityException
-	 *                if the current SecurityManager disallows program execution
 	 * 
 	 * @since 3.6
 	 */

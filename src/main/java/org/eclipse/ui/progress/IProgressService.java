@@ -10,8 +10,6 @@
  *******************************************************************************/
 package org.eclipse.ui.progress;
 
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.jface.operation.IRunnableContext;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.jface.resource.ImageDescriptor;
@@ -107,17 +105,10 @@ public interface IProgressService extends IRunnableContext {
 	 *            The operation to run
 	 * @param rule
 	 *            A scheduling rule, or <code>null</code>
-	 * @throws InvocationTargetException
-	 *             wraps any exception or error which occurs while running the
-	 *             runnable
-	 * @throws InterruptedException
-	 *             propagated by the context if the runnable acknowledges
-	 *             cancelation by throwing this exception.
 	 * 
 	 */
 	public void runInUI(IRunnableContext context,
-			IRunnableWithProgress runnable, ISchedulingRule rule)
-			throws InvocationTargetException, InterruptedException;
+			IRunnableWithProgress runnable, ISchedulingRule rule);
 
 	/**
 	 * Get the icon that has been registered for a Job by checking if the job
@@ -142,11 +133,8 @@ public interface IProgressService extends IRunnableContext {
 	 * @param runnable
 	 *            The runnable to execute and show the progress for.
 	 * @see IProgressService#getLongOperationTime
-	 * @throws InvocationTargetException
-	 * @throws InterruptedException
 	 */
-	public void busyCursorWhile(IRunnableWithProgress runnable)
-			throws InvocationTargetException, InterruptedException;
+	public void busyCursorWhile(IRunnableWithProgress runnable);
 
 	/**
 	 * This specialization of IRunnableContext#run(boolean, boolean,
@@ -155,9 +143,7 @@ public interface IProgressService extends IRunnableContext {
 	 * 
 	 * @since 3.2
 	 */
-	public void run(boolean fork, boolean cancelable,
-			IRunnableWithProgress runnable) throws InvocationTargetException,
-			InterruptedException;
+	public void run(boolean fork, boolean cancelable, IRunnableWithProgress runnable);
 
 	/**
 	 * Open a dialog on job when it starts to run and close it when the job is

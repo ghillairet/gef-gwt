@@ -10,8 +10,6 @@
  *******************************************************************************/
 package org.eclipse.ui;
 
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.jface.operation.IRunnableContext;
 import org.eclipse.jface.operation.IRunnableWithProgress;
@@ -194,9 +192,7 @@ public interface IWorkbenchWindow extends IPageService, IRunnableContext,
 	 * 
 	 * @since 3.2
 	 */
-	public void run(boolean fork, boolean cancelable,
-			IRunnableWithProgress runnable) throws InvocationTargetException,
-			InterruptedException;
+	public void run(boolean fork, boolean cancelable, IRunnableWithProgress runnable);
 
 	/**
 	 * Sets or clears the currently active page for this workbench window.

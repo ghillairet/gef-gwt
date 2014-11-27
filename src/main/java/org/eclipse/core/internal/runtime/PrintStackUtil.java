@@ -10,13 +10,8 @@
  *******************************************************************************/
 package org.eclipse.core.internal.runtime;
 
-import java.io.PrintStream;
-import java.io.PrintWriter;
-
-import org.eclipse.core.runtime.IStatus;
-
 public class PrintStackUtil {
-
+/*
 	static public void printChildren(IStatus status, PrintStream output) {
 		IStatus[] children = status.getChildren();
 		if (children == null || children.length == 0)
@@ -29,7 +24,8 @@ public class PrintStackUtil {
 			printChildren(children[i], output);
 		}
 	}
-
+*/
+/*
 	static public void printChildren(IStatus status, PrintWriter output) {
 		IStatus[] children = status.getChildren();
 		if (children == null || children.length == 0)
@@ -43,5 +39,5 @@ public class PrintStackUtil {
 			// printChildren(children[i], output);
 		}
 	}
-
+*/
 }

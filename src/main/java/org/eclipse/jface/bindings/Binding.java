@@ -10,10 +10,6 @@
  *******************************************************************************/
 package org.eclipse.jface.bindings;
 
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.StringWriter;
-
 import org.eclipse.core.commands.ParameterizedCommand;
 import org.eclipse.jface.util.Util;
 
@@ -380,36 +376,31 @@ public abstract class Binding {
 	 */
 	public String toString() {
 		if (string == null) {
-			
-			final StringWriter sw = new StringWriter();
-			final BufferedWriter stringBuffer = new BufferedWriter(sw);
-			try {
-				stringBuffer.write("Binding("); //$NON-NLS-1$
-				stringBuffer.write(getTriggerSequence().toString());
-				stringBuffer.write(',');
-				stringBuffer.newLine();
-				stringBuffer.write('\t');
-				stringBuffer.write(command==null?"":command.toString()); //$NON-NLS-1$
-				stringBuffer.write(',');
-				stringBuffer.newLine();
-				stringBuffer.write('\t');
-				stringBuffer.write(schemeId);
-				stringBuffer.write(',');
-				stringBuffer.newLine();
-				stringBuffer.write('\t');
-				stringBuffer.write(contextId);
-				stringBuffer.write(',');
-				stringBuffer.write(locale==null?"":locale); //$NON-NLS-1$
-				stringBuffer.write(',');
-				stringBuffer.write(platform==null?"":platform); //$NON-NLS-1$
-				stringBuffer.write(',');
-				stringBuffer.write((type == SYSTEM) ? "system" : "user"); //$NON-NLS-1$//$NON-NLS-2$
-				stringBuffer.write(')');
-				stringBuffer.flush();
-			} catch (IOException e) {
-				// shouldn't get this
-			}
-			string = sw.toString();
+
+			final String sw = new String();
+			sw.concat("Binding("); //$NON-NLS-1$
+			sw.concat(getTriggerSequence().toString());
+			sw.concat(",");
+			sw.concat("\n");
+			sw.concat("\t");
+			sw.concat(command==null?"":command.toString()); //$NON-NLS-1$
+			sw.concat(",");
+			sw.concat("\n");
+			sw.concat("\t");
+			sw.concat(schemeId);
+			sw.concat(",");
+			sw.concat("\n");
+			sw.concat("\t");
+			sw.concat(contextId);
+			sw.concat(",");
+			sw.concat(locale==null?"":locale); //$NON-NLS-1$
+			sw.concat(",");
+			sw.concat(platform==null?"":platform); //$NON-NLS-1$
+			sw.concat(",");
+			sw.concat((type == SYSTEM) ? "system" : "user"); //$NON-NLS-1$//$NON-NLS-2$
+			sw.concat(")");
+
+			string = sw;
 		}
 
 		return string;

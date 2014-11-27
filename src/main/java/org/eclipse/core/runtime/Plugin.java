@@ -10,11 +10,8 @@
  *******************************************************************************/
 package org.eclipse.core.runtime;
 
-import java.io.OutputStream;
-
 import org.eclipse.core.runtime.preferences.DefaultScope;
 import org.eclipse.core.runtime.preferences.IEclipsePreferences;
-import org.eclipse.core.runtime.preferences.IPreferencesService;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
@@ -435,7 +432,6 @@ public abstract class Plugin implements BundleActivator {
 	 * shutdown.
 	 * </p>
 	 * 
-	 * @see Preferences#store(OutputStream, String)
 	 * @see Preferences#needsSaving()
 	 * @since 2.0
 	 * @deprecated Replaced by InstanceScope.getNode(&lt;bundleId&gt;).flush()

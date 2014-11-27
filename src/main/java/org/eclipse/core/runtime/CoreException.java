@@ -12,8 +12,6 @@ package org.eclipse.core.runtime;
 
 import java.io.PrintStream;
 
-import org.eclipse.core.internal.runtime.PrintStackUtil;
-
 /**
  * A checked exception representing a failure.
  * <p>
@@ -106,7 +104,7 @@ public class CoreException extends Exception {
 	public void printStackTrace(PrintStream output) {
 		synchronized (output) {
 			super.printStackTrace(output);
-			PrintStackUtil.printChildren(status, output);
+//			PrintStackUtil.printChildren(status, output);
 		}
 	}
 
