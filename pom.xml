@@ -18,13 +18,13 @@
 		<dependency>
 			<groupId>com.google.gwt</groupId>
 			<artifactId>gwt-servlet</artifactId>
-			<version>2.6.1</version>
+			<version>2.7.0</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.google.gwt</groupId>
 			<artifactId>gwt-user</artifactId>
-			<version>2.6.1</version>
+			<version>2.7.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -60,7 +60,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>gwt-maven-plugin</artifactId>
-				<version>2.6.1</version>
+				<version>2.7.0</version>
 				<configuration>
 					<module>${gwt.module}</module>
 					<strict>false</strict>
@@ -71,7 +71,7 @@
 					<deploy>${project.build.directory}/gwtc/extra</deploy>
 					<extra>${project.build.directory}/gwtc/extra</extra>
 					<gen>${project.build.directory}/gwtc/gen</gen>
-					<!-- There's an issue on Mac: see http://code.google.com/p/google-web-toolkit/issues/detail?id=7474 
+					<!-- There's an issue on Mac: see http://code.google.com/p/google-web-toolkit/issues/detail?id=7474
 						<workDir>${project.build.directory}/gwtc/work</workDir> <codeServerWorkDir>${project.build.directory}/gwtc/superDevMode</codeServerWorkDir> -->
 				</configuration>
 				<executions>
